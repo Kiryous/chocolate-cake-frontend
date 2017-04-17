@@ -11,12 +11,14 @@
     "external-world": "NODE_ENV=production node ./node_modules/gulp/bin/gulp.js external-world",
     "no-server": "node ./node_modules/gulp/bin/gulp.js no-server"
   },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-preset-es2015": "^6.18.0",
     "browser-sync": "^2.12.3",
     "del": "^2.2.2",
-    "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-cache-bust": "^1.0.2",
     "gulp-cached": "^1.1.0",

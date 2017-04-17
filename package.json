@@ -13,10 +13,8 @@
     "build": "rm -rf build && node ./node_modules/gulp/bin/gulp.js",
     "postinstall": "npm build"
   },
-  "devDependencies": {
-    "browser-sync": "^2.12.3"  
-  },
   "dependencies": {
+    "browser-sync": "^2.12.3",    
     "express": "^4.15.2",
     "gulp": "^3.9.1",
     "autoprefixer": "^6.3.6",

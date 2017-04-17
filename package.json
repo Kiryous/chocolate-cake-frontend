@@ -11,7 +11,7 @@
     "external-world": "NODE_ENV=production node ./node_modules/gulp/bin/gulp.js external-world",
     "no-server": "node ./node_modules/gulp/bin/gulp.js no-server",
     "build": "node ./node_modules/gulp/bin/gulp.js",
-    "postinstall": "npm start"
+    "postinstall": "npm build"
   },
   "devDependencies": {
     "browser-sync": "^2.12.3"  

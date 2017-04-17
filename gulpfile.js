@@ -30,15 +30,16 @@ var processors = [
 ];
 
 // Ресурсы проекта
+var OUT = 'build';
 var paths = {
-  styles: 'assets/source/styles/',
-  css: 'assets/css/',
-  scripts: 'assets/source/scripts/',
-  js: 'assets/js/',
-  templates: 'templates/',
-  img: 'assets/source/img/',
-  bundles: 'assets/img/',
-  html: './'
+  styles: 'src/styles/',
+  css: OUT + '/assets/css/',
+  scripts: 'src/scripts/',
+  js:  OUT + '/assets/js/',
+  templates: 'src/templates/',
+  img: 'src/img/',
+  bundles:  OUT + '/assets/img/',
+  html: 'build/'
 };
 
 // Одноразовая сборка проекта
@@ -48,24 +49,24 @@ gulp.task('default', function() {
 
 // Запуск живой сборки
 gulp.task('live', function() {
-  gulp.start('templates', 'styles', 'scripts', 'img', 'cache', 'watch', 'server');
+  gulp.start('templates', 'styles', 'scripts', 'img', 'watch', 'server');
 });
 
 // Запуск туннеля в интернет
 gulp.task('external-world', function() {
-  gulp.start('templates', 'styles', 'scripts', 'img', 'cache', 'watch', 'web-server');
+  gulp.start('templates', 'styles', 'scripts', 'img', 'watch', 'web-server');
 });
 
 // Cборка с вотчем без браузерсинка
 gulp.task('no-server', function() {
-  gulp.start('templates', 'styles', 'scripts', 'img', 'cache', 'watch');
+  gulp.start('templates', 'styles', 'scripts', 'img', 'watch');
 });
 
 // Федеральная служба по контролю за оборотом файлов
 gulp.task('watch', function() {
-  gulp.watch(paths.templates + '**/*.templates', ['templates']);
-  gulp.watch(paths.styles + '**/*.pcss', ['styles', 'cache']);
-  gulp.watch(paths.scripts + '*.js', ['scripts', 'cache']);
+  gulp.watch(paths.templates + '**/*.html', ['templates']);
+  gulp.watch(paths.styles + '**/*.pcss', ['styles']);
+  gulp.watch(paths.scripts + '*.js', ['scripts']);
   gulp.watch(paths.img + '*.{png,jpg,gif,svg}', ['img']).on('change', function(event) {
     if (event.type === 'deleted') {
       del(paths.bundles + path.basename(event.path));
@@ -92,7 +93,8 @@ gulp.task('styles', function () {
     .pipe(postcss(processors))
     .pipe(rename('style.css'))
     .pipe(nano({convertValues: {length: false}}))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(paths.css))
+    .pipe(reload({stream: true}));    
 });
 
 // Lint for god sick 
@@ -113,7 +115,8 @@ gulp.task('scripts', function() {
     .pipe(babel())
     .pipe(concat('scripts.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js));
+    .pipe(gulp.dest(paths.js))
+    .pipe(reload({stream: true}));    
 });
 
 // Сжатие картинок
@@ -139,7 +142,7 @@ gulp.task('server', function() {
   portfinder.getPort(function (err, port) {
     browserSync({
       server: {
-        baseDir: "."
+        baseDir: "build/"
       },
       host: 'localhost',
       notify: false,
@@ -153,7 +156,7 @@ gulp.task('web-server', function() {
   portfinder.getPort(function (err, port) {
     browserSync({
       server: {
-        baseDir: "."
+        baseDir: "demo/"
       },
       tunnel: true,
       host: 'localhost',

@@ -3,9 +3,9 @@ var app = new express();
 var path = require('path');
 var port = process.env.PORT || 8888;
 
-app.use('/',express.static(__dirname)); 
+app.use('/',express.static(__dirname + '/build')); 
 app.get('/', function(req, res) {
-  res.sendFile(path.resolve('index.html'));
+  res.sendFile(path.resolve(__dirname + 'index.html'));
 });
 
 var listener = app.listen(port, function(){

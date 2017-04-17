@@ -44,15 +44,17 @@ yarn external-world
 ```
 
 ## Шаблонизация
-Шаблоны собираются из папки `templates` с помощью [swig](https://github.com/paularmstrong/swig). Составные части лежат в `blocks`. Боевые файлы автоматически собираются в корне проекта.
+Шаблоны собираются из папки `src/templates` с помощью [swig](https://github.com/paularmstrong/swig). Составные части лежат в `src/templates/blocks`. Боевые файлы автоматически собираются в корне проекта.
 
 ## Стили
-Верстаются в `assets/source/styles/layout.pcss`, компилируются в `assets/css/style.css`. Работает антикэш — к ссылкам на стили добавляется md5-хэш.
+Верстаются в `src/styles/layout.pcss`, компилируются в `build/assets/css/style.css`. Работает антикэш — к ссылкам на стили добавляется md5-хэш.
 
 #### PostCSS
-Переменные ([precss](https://github.com/jonathantneal/precss#variables)):
+Переменные (сssnext):
 ```css
-$helvetica: "Helvetica Neue", Arial, sans-serif;
+:root {
+  --helvetica: "Helvetica Neue", Arial, sans-serif;
+}
 ```
 Вложенность ([postcss-nested](https://github.com/postcss/postcss-nested)) для элементов и модификаторов в БЭМе:
 ```css

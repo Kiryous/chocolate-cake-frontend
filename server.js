@@ -8,6 +8,6 @@ app.get('/', function(req, res) {
   res.sendFile(path.resolve('index.html'));
 });
 
-var listener = app.listen(8888, function(){
+var listener = app.listen(port, function(){
     console.log('Listening on port ' + listener.address().port); //Listening on port 8888
 });

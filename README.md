@@ -1,4 +1,4 @@
-# Инитум
+# Инитум-с-джанго-лайк-шаблонами-и-чистой-сборкой
 Шаблон помогает быстро начать вёрстку проекта.
 
 Перед началом работы нужно установить зависимости:
@@ -73,7 +73,7 @@ yarn external-world
 CSSNext: префиксы, [кастомные медиа-запросы](https://github.com/postcss/postcss-custom-media) и другое.
 
 ## Сжатие картинок
-Картинки кладутся в `assets/source/img/` и с помощью [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin) минифицируются в папку `assets/img/`.
+Картинки кладутся в `src/img/` и с помощью [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin) минифицируются в папку `build/assets/img/`.
 
 ## Скрипты
 Можно писать на es2015 — подключен и работает Babel. Включен jQuery 3. Работает антикэш (см. абзац о стилях).

@@ -83,7 +83,7 @@ gulp.task('templates', function() {
       {defaults: { cache: false }}
     ))
     .pipe(gulp.dest(paths.html))
-    // .pipe(reload({stream: true}));
+    .pipe(reload({stream: true}));
 });
 
 // Компиляция стилей, добавление префиксов
@@ -94,7 +94,7 @@ gulp.task('styles', function () {
     .pipe(rename('style.css'))
     .pipe(nano({convertValues: {length: false}}))
     .pipe(gulp.dest(paths.css))
-    // .pipe(reload({stream: true}));    
+    .pipe(reload({stream: true}));    
 });
 
 // Lint for god sick 
@@ -116,7 +116,7 @@ gulp.task('scripts', function() {
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(gulp.dest(paths.js))
-    // .pipe(reload({stream: true}));    
+    .pipe(reload({stream: true}));    
 });
 
 // Сжатие картинок
@@ -134,7 +134,7 @@ gulp.task('cache', function() {
   gulp.src(paths.html + '*.html')
     .pipe(cachebust())
     .pipe(gulp.dest(paths.html))
-    // .pipe(reload({stream: true}));
+    .pipe(reload({stream: true}));
 });
 
 // Локальный сервер

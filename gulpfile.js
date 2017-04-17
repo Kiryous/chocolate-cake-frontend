@@ -83,7 +83,7 @@ gulp.task('templates', function() {
       {defaults: { cache: false }}
     ))
     .pipe(gulp.dest(paths.html))
-    .pipe(reload({stream: true}));
+    // .pipe(reload({stream: true}));
 });
 
 // Компиляция стилей, добавление префиксов

@@ -1,9 +1,9 @@
 {
-  "name": "Initium",
-  "version": "3.1.0",
+  "name": "chocolate-cake-frontend",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/straykov/initium.git"
+    "url": "https://github.com/kiryous/chocolate-cake-frontend.git"
   },
   "scripts": {
     "start": "node server.js",
@@ -64,5 +64,9 @@
     "rules": {
       "indentation": 2
     }
-  }
+  },
+  "engines": {
+    "node": "5.5.0",
+    "npm": "3.3.12"
+  } 
 }

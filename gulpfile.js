@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    swig = require('gulp-swig'),
+    twig = require('gulp-twig'),
     inline  = require('postcss-inline-svg'),
     cache = require('gulp-cached'),
     image = require('gulp-imagemin'),
@@ -79,7 +79,7 @@ gulp.task('watch', function() {
 gulp.task('templates', function() {
   gulp.src(paths.templates + '*.html')
     .pipe(plumber({errorHandler: onError}))
-    .pipe(swig(
+    .pipe(twig(
       {defaults: { cache: false }}
     ))
     .pipe(gulp.dest(paths.html))

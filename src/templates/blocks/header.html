@@ -1,0 +1,7 @@
+{% set items =['One', 'Two', 'Three'] %}
+<header class="header header--pink">
+  {% for title in items %}
+    {% include './header-item.html' with title=title %}
+    {% include './header-item.html'%}
+  {% endfor %}
+</header>

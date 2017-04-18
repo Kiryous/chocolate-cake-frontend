@@ -1,6 +1,7 @@
 {% set items =['One', 'Two', 'Three'] %}
+{% set prefix = "Kek" %}
 <header class="header header--pink">
   {% for title in items %}
-    {% include './header-item.html' with title %}
+    {% include './header-item.html' with title, prefix %}
   {% endfor %}
 </header>

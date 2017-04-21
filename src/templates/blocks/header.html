@@ -1,6 +1,17 @@
-{% set items =['Новости', 'Видео', 'Тур'] %}
+{% set items =[
+    {'title': 'Новости', 'url': '/news.html'}
+  ]
+%}
+{% set networks =['twitter', 'facebook', 'youtube'] %}
 <header class="header header--pink">
-  {% for title in items %}
-    {% include './header-item.html' with title %}
-  {% endfor %}
+  <div class="header__logo"></div>
+  <nav class="nav">
+    {% for item in items %}
+      {% include './header-item.html' with item %}
+    {% endfor %}
+  </nav>
+  {% include './icon.html' with {title: "facebook", size: "small"} %}
+  {% include './icon.html' with {title: "youtube"} %}  
+  {% include './icon.html' with {title: "twitter"} %}
 </header>
+

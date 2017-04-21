@@ -1,13 +1,17 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    background: url("../img/logo.png") no-repeat;
+  }
+
   &__item {
     width: 100px;
   }
+
   &--pink {
     width: 100%;
-    background: #f94084;
-  }
-  &--logo {
-    background: url("../img/logo.png") no-repeat;
     background: var(--pink);
   }
 }

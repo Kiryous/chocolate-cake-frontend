@@ -1,8 +1,11 @@
 {% set items =[
-    {'title': 'Новости', 'url': '/news.html'}
+    {'title': 'Новости', 'url': '/news.html'},
+    {'title': 'Альбом', 'url': '/album.html'},
+    {'title': 'Концерты', 'url': '/concert.html'},
+    {'title': 'Видео', 'url': '/video.html'},
+    {'title': 'Магазин', 'url': '/shop.html'},
   ]
 %}
-{% set networks =['twitter', 'facebook', 'youtube'] %}
 <header class="header header--pink">
   <div class="header__logo"></div>
   <nav class="nav">
@@ -10,8 +13,12 @@
       {% include './header-item.html' with item %}
     {% endfor %}
   </nav>
-  {% include './icon.html' with {title: "facebook", size: "small"} %}
-  {% include './icon.html' with {title: "youtube"} %}  
-  {% include './icon.html' with {title: "twitter"} %}
+  <div class="icons">
+    <a href="https://www.youtube.com/channel/UCgE4mgF3WgzHcaF4ONlCRpw">{% include './icon.html' with {title: "youtube", size: "small"} %}</a>
+    <a href="https://www.instagram.com/choco_tort/">{% include './icon.html' with {title: "instagram", size: "small"} %}</a>
+    <a href="http://facebook.com">{% include './icon.html' with {title: "facebook", size: "small"} %}</a>
+    <a href="http://twitter.com">{% include './icon.html' with {title: "twitter", size: "small"} %}</a>
+    <a href="http://telegram.com">{% include './icon.html' with {title: "telegram", size: "small"} %}</a>
+    <a href="https://chococake.bandcamp.com/releases">{% include './icon.html' with {title: "bandcamp", size: "small"} %}</a>
+  </div>
 </header>
-

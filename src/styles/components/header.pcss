@@ -1,17 +1,36 @@
 .header {
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
 
   &__logo {
-    background: url("../img/logo.png") no-repeat;
+    background: url("../img/vk.svg") no-repeat;
+    width: 120px;
+    height: 100px;
+    float: left;
+    padding: 40px 20px;
+    margin-right: 100px;
+    margin-left: 20px;
   }
 
   &__item {
-    width: 100px;
+    margin-right: 50px;
   }
 
   &--pink {
     width: 100%;
     background: var(--pink);
   }
+}
+
+.logo {
+  background: url("../img/logo.svg") no-repeat;
+  width: 120px;
+  height: 100px;
+  float: left;
+  padding: 40px 20px;
+  margin-right: 100px;
+  margin-left: 20px;
+}
+
+.no-svg .logo {
+	background-image: url(../img/logo.png);
 }

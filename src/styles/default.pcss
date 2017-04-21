@@ -1,14 +1,4 @@
 /* Дефолтные стили */
-@font-face {
-    font-family: Gilroy-Light;
-    src: url(../Gilroy-Light.otf);
-}
-
-@font-face {
-    font-family: Gilroy-ExtraBold;
-    src: url(../Gilroy-ExtraBold.otf);
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -19,7 +9,8 @@
 /* Формы */
 input, textarea, button {
   outline: none;
-  font-family: var(--bold);
+  font-family: var(--gilroy);
+  font-weight: bold;
 }
 
 /* Аккуратные таблицы */
@@ -34,7 +25,8 @@ html {
 }
 
 body {
-  font-family: var(--light);
+  font-family: var(--gilroy);
+  font-weight: 300;
   font-size: 20px;
   line-height: 20px;
 }

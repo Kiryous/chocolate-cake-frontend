@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     portfinder = require('portfinder'),
     postcss = require('gulp-postcss'),
-    precss = require('precss'),
+    postcssEasyImport = require('postcss-easy-import'),
     cssnext = require('postcss-cssnext'),
     nano = require('gulp-cssnano'),
     browserSync = require("browser-sync"),
@@ -24,7 +24,7 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 
 var processors = [
-  precss(),
+  postcssEasyImport({extensions: '.pcss'}),
   cssnext(),
   inline()
 ];

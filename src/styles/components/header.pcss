@@ -1,5 +1,7 @@
 .header {
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
   /*position: fixed;*/
 
   &__logo {
@@ -7,22 +9,7 @@
     background-size: 100%;
     width: 150px;
     height: 110px;
-    float: left;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-    margin-right: 100px;
-    margin-left: 20px;
-  }
-
-  &__item {
-    margin-right: 50px;
-    font-family: var(--gilroy);
-    font-size: 20px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    margin: 0 0px 0 20px;
   }
 
   &--pink {

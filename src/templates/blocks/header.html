@@ -8,9 +8,9 @@
 %}
 <header class="header header--pink">
   <div class="header__logo"></div>
-  <nav class="nav">
+  <nav class="nav header__nav">
     {% for item in items %}
-      {% include './header-item.html' with item %}
+      {% include './nav-item.html' with item %}
     {% endfor %}
   </nav>
   <div class="icons">

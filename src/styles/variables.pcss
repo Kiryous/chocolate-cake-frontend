@@ -1,6 +1,6 @@
 /* Переменные */
 :root {
-    --gilroy: "Gilroy-Light", Arial, sans-serif;
+    --gilroy: "Gilroy", Arial, sans-serif;
     --link: rgb(25, 25, 25);
     --hover: rgb(10, 10, 10);
     --visited: rgb(3, 9, 4);
@@ -10,22 +10,18 @@
 }
 
 @font-face {
-<<<<<<< HEAD
-	font-family: 'Gilroy-Light';
-	src: url('../fonts/Gilroy-Light.otf') format('otf');
-    /*TODO load woff2, woff, ttf */
-=======
 	font-family: 'Gilroy';
-	src: url('../fonts/Gilroy-Light.woff2') format('woff2'),
+	src: local('Gilroy'), 
+		 url('../fonts/Gilroy-Light.woff2') format('woff2'),
 		 url('../fonts/Gilroy-Light.woff') format('woff');
->>>>>>> 966544499657d5e64691ca166e0b9cb9e7057627
 	font-style: normal;
 	font-weight: 300;
 }
 
 @font-face {
 	font-family: 'Gilroy';
-	src: url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+	src: local('Gilroy'), 
+		 url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
 		 url('../fonts/Gilroy-ExtraBold.woff') format('woff');
 	font-style: normal;
 	font-weight: bold;

@@ -2,19 +2,28 @@
     background: var(--pink);
     color: white;
     text-transform: uppercase;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     justify-content: center;
     display: inline-block;
-    padding: 18px 18px;
+    padding: 20px 20px; /*красивее смотрятся кнопки одного размера, но не тогда в них могут не влезать слова*/
     letter-spacing: 1.1px;
     font-size: 20px;
     border-radius: 15px;
     z-index: 10;
     cursor: pointer;
     transition: .3s;
+    text-align: center;
 
     &:hover {
-        color: var(--pink);
-        background: white;
+      color: var(--pink);
+      background: white;
+    }
+
+    &:first-child {
+      margin-right: 100px;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
 }

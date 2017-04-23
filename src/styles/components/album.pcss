@@ -1,26 +1,67 @@
 .album {
   background-color: #fff;
   text-align: center;
-  min-height: 100vh;
-  margin-top: 40px;
+  min-height: 65vh;
+  margin-top: 50px;
 
   &__music {
-    background-color: rgba(0,0,0,0.2);
     width: 100%;
-    height: 80vh;
-    margin-bottom: 20px;
-    margin-top: 50px;
+    height: 63vh;
+    margin-top: 100px;
   }
 }
 
-.title-album {
-    text-transform: uppercase;
+h1 {
+  margin-top: 100px;
+}
 
-  &--titlepink {
-    color: var(--pinktitle);
-  }
+.bot {
+  margin-bottom: 50px;
+}
 
-  &--titleblack {
-    color: var(--blacktitle);
-  }
+.album-icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.play {
+  background: url(../img/play.png) no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
+.pause {
+  background: url(../img/pause.png) no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
+.player {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.line-player {
+  text-align: center;
+  width: 900px;
+  height: 5px;
+  background-color: rgb(25, 25, 25);
+}
+
+.player h2 {
+  font-family: var(--gilroy);
+  font-weight: normal;
+  letter-spacing: 0.5em;
+  font-size: 26px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }

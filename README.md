@@ -60,11 +60,11 @@ yarn external-world
 ```css
 .block {
   ...
-  
+
   &__element {
     ...
   }
-  
+
   &--modifier {
     ...
   }

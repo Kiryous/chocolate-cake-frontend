@@ -23,6 +23,11 @@ var gulp = require('gulp'),
     babel = require("gulp-babel"),
     reload = browserSync.reload;
 
+function flatten(path) {
+	path.dirname = '';
+	return path;
+}
+
 var processors = [
   postcssEasyImport({extensions: '.pcss'}),
   cssnext(),
@@ -39,27 +44,29 @@ var paths = {
   templates: 'src/templates/',
   img: 'src/img/',
   bundles:  OUT + '/assets/img/',
-  html: 'build/'
+  html: 'build/',
+  fonts: 'src/fonts/',
+  outFonts: OUT + '/assets/fonts/'
 };
 
 // Одноразовая сборка проекта
 gulp.task('default', function() {
-  gulp.start('templates', 'styles', 'scripts', 'cache', 'img');
+  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'cache', 'img');
 });
 
 // Запуск живой сборки
 gulp.task('live', function() {
-  gulp.start('templates', 'styles', 'scripts', 'img', 'watch', 'server');
+  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'img', 'watch', 'server');
 });
 
 // Запуск туннеля в интернет
 gulp.task('external-world', function() {
-  gulp.start('templates', 'styles', 'scripts', 'img', 'watch', 'web-server');
+  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'img', 'watch', 'web-server');
 });
 
 // Cборка с вотчем без браузерсинка
 gulp.task('no-server', function() {
-  gulp.start('templates', 'styles', 'scripts', 'img', 'watch');
+  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'img', 'watch');
 });
 
 // Федеральная служба по контролю за оборотом файлов
@@ -67,6 +74,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.templates + '**/*.html', ['templates']);
   gulp.watch(paths.styles + '**/*.pcss', ['styles']);
   gulp.watch(paths.scripts + '*.js', ['scripts']);
+  gulp.watch(paths.fonts + '**/*', ['copy-fonts']);  
   gulp.watch(paths.img + '*.{png,jpg,gif,svg}', ['img']).on('change', function(event) {
     if (event.type === 'deleted') {
       del(paths.bundles + path.basename(event.path));
@@ -127,6 +135,14 @@ gulp.task('img', function() {
       verbose: true
     }))
     .pipe(gulp.dest(paths.bundles));
+});
+
+gulp.task('copy-fonts', () => {
+	return gulp
+		.src(paths.fonts + '**/*')
+		.pipe(plumber({errorHandler: onError}))
+		.pipe(rename(flatten))
+		.pipe(gulp.dest(paths.outFonts));
 });
 
 // Очистка кэша для яваскрипта и ЦССа

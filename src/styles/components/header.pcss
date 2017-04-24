@@ -1,31 +1,19 @@
 .header {
-  &__item {
-    width: 100px;
-    background: red;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  /*position: fixed;*/
+
+  &__logo {
+    background: url("../img/logo.png") center no-repeat;
+    background-size: 100%;
+    width: 150px;
+    height: 110px;
+    margin: 0 0px 0 20px;
   }
+
   &--pink {
-    background: #f94084;
-  }
-  &__icon {
-    height: 30px;
-    width: 30px;
-    .icon__instagram {
-      background: url("../templates/icons/instagram.svg") no-repeat;
-    }
-    &__twitter {
-      background: url("../../templates/icons/twitter.svg") no-repeat;
-    }
-    .icon__facebook {
-      background: url("../templates/icons/facebook.svg") no-repeat;
-    }
-    .icon__telegram {
-      background: url("../templates/icons/telegram.svg") no-repeat;
-    }
-    .icon__youtube {
-      background: url("../templates/icons/youtube.svg") no-repeat;
-    }
-    .icon__apple {
-      background: url("../templates/icons/apple.svg") no-repeat;
-    }
+    width: 100%;
+    background: var(--pink);
   }
 }

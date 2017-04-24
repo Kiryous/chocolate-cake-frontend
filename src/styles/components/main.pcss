@@ -1,0 +1,37 @@
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  background: url("../img/mainPhoto.png") no-repeat;
+  background-size: cover;
+}
+
+.flex-container-bot {
+  display: flex;
+  justify-content: center;
+  align-item: flex-end;
+  align-self: flex-end;
+  justify-content: space-around;
+}
+
+.inner-flex {
+  margin-bottom: auto;
+  padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-item: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  line-height: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  &--titlepink {
+    color: var(--pinktitle);
+  }
+  &--titleblack {
+    color: var(--blacktitle);
+  }
+}

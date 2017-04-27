@@ -3,33 +3,37 @@
   position: fixed;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   z-index: 15;
 
+  &--pink {
+    width: 100%;
+    background: var(--pink);
+  }
+
   &__logo {
+    width: 160px;
+    height: 100px;
+    padding: 0;
+    flex-shrink: 0;
     background: url("../img/logo.png") center no-repeat;
     background-size: 100%;
-    background-position: 50% 50%;
-    width: 300px;
-    height: 100px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 100px;
-    padding: 0;
-    justify-content: flex-start;
   }
 
   &__item {
     margin-right: 50px;
     font-family: var(--gilroy);
     font-size: 22px;
+    transition: .3s;
 
-    &:last-child {
-      margin-right: 0;
+    &:hover {
+      color: white;
+      transition: 0s;      
     }
   }
 
-  &--pink {
-    width: 100%;
-    background: var(--pink);
+  &__icons {
+    display: flex;
+    justify-content: flex-end;
   }
 }

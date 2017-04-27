@@ -8,12 +8,12 @@
 %}
 <header class="header header--pink">
   <div class="header__logo"></div>
-  <nav class="nav">
+  <nav class="nav header__nav">
     {% for item in items %}
       {% include './header-item.html' with item %}
     {% endfor %}
   </nav>
-  <div class="icons">
+  <div class="header__icons">
     <a href="https://www.youtube.com/channel/UCgE4mgF3WgzHcaF4ONlCRpw">{% include './icon.html' with {title: "youtube", size: "small"} %}</a>
     <a href="https://www.instagram.com/choco_tort/">{% include './icon.html' with {title: "instagram", size: "small"} %}</a>
     <a href="http://facebook.com">{% include './icon.html' with {title: "facebook", size: "small"} %}</a>

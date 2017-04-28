@@ -15,23 +15,26 @@
   }
 }
 
-.button-shop {
-  margin-bottom: 140px;
+.shop-button {
+  margin-bottom: 10%;
 }
 
-.cont {
+.shop-card {
   display: inline-block;
   height: 800px;
   width: 300px;
-  justify-content: space-between;
-  margin-right: 100px;
+
+  &__caption {
+    font-family: var(--gilroy);
+    font-size: 26px;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
 }
 
-.flex-item {
-  margin-top: 20px;
-}
-
-.flex-photo {
+.shop-photo {
   background: url("../img/shopItem.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -39,9 +42,4 @@
   width: 300px;
   display: block;
   margin-bottom: 20px;
-}
-
-.descr {
-  font-family: var(--gilroy);
-  font-size: 26px;
 }

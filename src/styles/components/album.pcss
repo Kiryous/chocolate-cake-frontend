@@ -15,7 +15,7 @@ h1 {
   margin-top: 100px;
 }
 
-.bot {
+.album-button {
   margin-bottom: 50px;
 }
 
@@ -46,6 +46,17 @@ h1 {
 .player {
   margin-left: 50px;
   margin-right: 50px;
+
+  &--title {
+    font-family: var(--gilroy);
+    font-weight: normal;
+    letter-spacing: 0.5em;
+    font-size: 26px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
 }
 
 .line-player {
@@ -53,15 +64,4 @@ h1 {
   width: 900px;
   height: 5px;
   background-color: rgb(25, 25, 25);
-}
-
-.player h2 {
-  font-family: var(--gilroy);
-  font-weight: normal;
-  letter-spacing: 0.5em;
-  font-size: 26px;
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-  text-transform: uppercase;
 }

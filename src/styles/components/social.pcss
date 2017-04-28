@@ -11,11 +11,14 @@
   }
 }
 
-.social-icons {
-  max-width: 100vw;
+.follow-container {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
-.follow input {
+.follow {
+  &__input {
     margin-top: 20px;
     border: 2px solid rgb(23, 23, 23);
     color: rgb(23, 23, 23);
@@ -28,54 +31,33 @@
     font-size: 20px;
     padding-left: 20px;
     margin-right: 20px;
-}
+  }
 
-.follow button {
-  border: 2px solid rgb(23, 23, 23);
-  color: rgb(23, 23, 23);
-  background-color: white;
-  text-transform: uppercase;
-  border-radius: 15px;
-  width: 200px;
-  height: 50px;
-  display: inline-block;
-  font-size: 20px;
-}
-
-.follow-container {
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-
-.circle-icon {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 8px solid var(--pink);
-  text-align: center;
-  padding: 16px;
-  box-sizing: border-box;
-}
-
-.line-icon {
-  color: var(--pink);
-  width: 100px;
-  height: 105px;
-  display: inline-flex;
-  border-bottom: 7px solid var(--pink);
-  margin-right: 70px;
-
-  &:last-child {
-    margin-right: 0;
+  &__button {
+    border: 2px solid rgb(23, 23, 23);
+    color: rgb(23, 23, 23);
+    background-color: white;
+    text-transform: uppercase;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    font-size: 20px;
   }
 }
 
-.social-icons {
+.social-icon {
   margin-top: 150px;
   justify-content: space-between;
   display: inline-flex;
   max-width: 100vw;
   margin-bottom: 200px;
+  width: 30%;
+
+  &--line {
+    color: var(--pink);
+    width: 90px;
+    height: 98px;
+    border-bottom: 7px solid var(--pink);
+  }
 }

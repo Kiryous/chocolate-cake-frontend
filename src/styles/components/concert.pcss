@@ -6,42 +6,41 @@
   background-color: rgba(0,0,0,0.6);
 }
 
+.tour {
+  width: 80%;
+  margin-left: 10%;
+
+  &__item {
+    display: flex;
+    border-bottom: 5px solid var(--pink);
+    height: 100px;
+    padding: 70px 70px;
+
+    &__place {
+      color: var(--pink);
+      font-size: 34px;
+      width: 100%;
+      display: flex;
+    }
+
+    &__club {
+      display: flex;
+      jusify-content: flex-start;
+      width: 100%;
+      font-size: 34px;
+    }
+
+    &__time {
+      font-size: 34px;
+      justify-content: flex-end;
+      width: 100%;
+      display: flex;
+    }
+  }
+}
+
 .concert-button {
   width: 100%;
   padding-top: 80px;
   padding-bottom: 50px;
-}
-
-.tour {
-  width: 80%;
-  margin-left: 10%;
-}
-
-.tour-item {
-  display: inline-flex;
-  border-bottom: 5px solid var(--pink);
-  width: 100%;
-  height: 147px;
-  padding: 0 70px;
-
-  &__place {
-    color: var(--pink);
-    font-size: 34px;
-    width: 100%;
-    display: flex;
-  }
-
-  &__club {
-    display: flex;
-    jusify-content: flex-start;
-    width: 100%;
-    font-size: 34px;
-  }
-
-  &__time {
-    font-size: 34px;
-    justify-content: flex-end;
-    width: 100%;
-    display: flex;
-  }
 }

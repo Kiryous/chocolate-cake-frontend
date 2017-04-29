@@ -3,38 +3,34 @@
   background: url("../img/mainPhoto.png") no-repeat;
   background-size: cover;
   background-position: 50% 0; /*следует сделать адаптивность с изменением этих процентов, иначе чуваку слева отрубает голову*/
-}
 
-.flex-container-bottom {
-  justify-content: center;
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-}
+  &__container-bottom {
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 50px;
 
-.inner-flex {
-  width: 100%;
-  padding-bottom: 20px;
-}
+    &__title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      margin-top: 20px;
 
-.title {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  margin-top: 20px;
+      &--titlepink {
+        color: var(--pinktitle);
+      }
 
-  &--titlepink {
-    color: var(--pinktitle);
-  }
-
-  &--titleblack {
-    color: var(--blacktitle);
+      &--titleblack {
+        color: var(--blacktitle);
+      }
+    }
   }
 }
 
-.button-container {
+.main-button {
   justify-content: center;
   display: flex;
   align-items: flex-end;

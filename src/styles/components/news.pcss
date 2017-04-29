@@ -10,6 +10,20 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
+
+  &__title-news {
+    color: white;
+    font-size: 40px;
+    display: block;
+    text-transform: uppercase;
+    margin: 0;
+
+    &--date {
+      font-size: 30px;
+      display: block;
+      text-transform: none;
+    }
+  }
 }
 
 .img {
@@ -34,19 +48,5 @@
   &--img3 {
     background-image: linear-gradient(transparent, var(--pink)), url(../img/news3.jpg);
     background-position: 50% 30%;
-  }
-}
-
-.title-news {
-  color: white;
-  font-size: 40px;
-  display: block;
-  text-transform: uppercase;
-  margin: 0;
-
-  &--date {
-    font-size: 30px;
-    display: block;
-    text-transform: none;
   }
 }

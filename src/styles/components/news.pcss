@@ -1,31 +1,26 @@
 .news {
   background: white;
-  background-size: cover;
-  min-height: 90vh;
-  width: 100%;
-  text-align: center;
-  margin-top: 50px;
-  max-width: 100vw;
 
   &__container {
-    min-height: 90vh;
-    max-width: 100vw;
-    width: 100%;
-    margin-bottom: 20px;
+    padding: 50px 0;
   }
 }
 
 .line-container {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .img {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
   background-repeat: no-repeat;
   height: 400px;
-  text-align: left;
-  padding-top: 250px;
-  padding-left: 20px;
-  width: 33.33%;
+  padding: 0 20px;
+  flex: 1 1 33.33%;
   &--img1 {
     background-image: linear-gradient(transparent, var(--pink)), url(../img/news1.jpg);
     background-position: 50% 30%;
@@ -44,7 +39,7 @@
 
 .title-news {
   color: white;
-  font-size: 45px;
+  font-size: 40px;
   display: block;
   text-transform: uppercase;
   margin: 0;

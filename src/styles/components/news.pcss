@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: stretch;
 
-  &__title-news {
+  &__title-news{
     color: white;
     font-size: 40px;
     display: block;
@@ -30,11 +30,17 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
   background-repeat: no-repeat;
   height: 400px;
   padding: 0 20px;
   flex: 1 1 33.33%;
+
+  /*-webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s ease;*/
+
+
   &--img1 {
     background-image: linear-gradient(transparent, var(--pink)), url(../img/news1.jpg);
     background-position: 50% 30%;
@@ -50,3 +56,7 @@
     background-position: 50% 30%;
   }
 }
+
+/*.img:hover {
+  background: rgba(0,0,0,0.8);
+}*/

@@ -40,10 +40,137 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  &__hamburger {
+    display: none;
+
+    &--cross {
+      display:none;
+    }
+  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 320px) and (max-width: 414px) {
   .header {
+    max-width: 100vw;
+  }
+
+  .header--pink {
+    width: 50%;
+  }
+
+  .header__container {
+    padding: 0 0;
+  }
+
+  .header__logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .header__item {
+    display: none;
+  }
+
+  .header__icons {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .header__hamburger--cross: focus {
+    outline: none;
+  }
+
+  .header__hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: white;
+  }
+
+  .header__hamburger span::before,
+  .header__hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
     width: 100%;
+    height: 8px;
+    background-color: #fff;
+    content: "";
+  }
+
+  .header__hamburger span::before {
+    top: -20px;
+  }
+
+  .header__hamburger span::after {
+    bottom: -20px;
+  }
+
+
+  .header__hamburger--cross {
+    background-color: #ff3264;
+  }
+
+  .header__hamburger--cross span {
+    transition: background 0s 0.3s;
+  }
+
+  .header__hamburger--cross span::before,
+  .header__hamburger--cross::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+  }
+
+  .header__hamburger--cross span::before {
+    transition-property: top, transform;
+  }
+
+  .header__hamburger--cross span::after {
+    transition-property: bottom, transform;
+  }
+
+  /* состояние active при открытом меню  */
+  .header__hamburger--cross.is-active {
+    background-color: #cb0032;
+  }
+
+  .header__hamburger--cross.is-active span {
+    background: none;
+  }
+
+  .header__hamburger--cross.is-active span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .header__hamburger--cross.is-active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  .header__hamburger--cross.is-active span::before,
+  .header__hamburger--cross.is-active span::after {
+    transition-delay: 0s, 0.3s;
   }
 }

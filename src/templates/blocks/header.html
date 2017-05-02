@@ -6,23 +6,25 @@
     {'title': 'Магазин', 'url': '/shop.html'},
   ]
 %}
-<header class="header header--pink header__container">
-  <div class="header__logo"></div>
-  <nav class="nav header__nav">
-    {% for item in items %}
-      {% include './header-item.html' with item %}
-    {% endfor %}
-  </nav>
-  <div class="header__icons">
-    <i><a href="https://www.youtube.com/channel/UCgE4mgF3WgzHcaF4ONlCRpw">{% include './icon.html' with {title: "youtube", size: "small"} %}</a></i>
-    <i><a href="https://www.instagram.com/choco_tort/">{% include './icon.html' with {title: "instagram", size: "small"} %}</a></i>
-    <i><a href="http://facebook.com">{% include './icon.html' with {title: "facebook", size: "small"} %}</a></i>
-    <i><a href="http://twitter.com">{% include './icon.html' with {title: "twitter", size: "small"} %}</a></i>
-    <i><a href="http://telegram.com">{% include './icon.html' with {title: "telegram", size: "small"} %}</a></i>
-    <i><a href="https://chococake.bandcamp.com/releases">{% include './icon.html' with {title: "bandcamp", size: "small"} %}</a></i>
-  </div>
+<header class="header header--pink">
+  <div class="container header__container">
+    <div class="header__logo"></div>
+    <nav class="nav header__nav">
+      {% for item in items %}
+        {% include './header-item.html' with item %}
+      {% endfor %}
+    </nav>
+    <div class="header__icons">
+      <i><a href="https://www.youtube.com/channel/UCgE4mgF3WgzHcaF4ONlCRpw">{% include './icon.html' with {title: "youtube", size: "small"} %}</a></i>
+      <i><a href="https://www.instagram.com/choco_tort/">{% include './icon.html' with {title: "instagram", size: "small"} %}</a></i>
+      <i><a href="http://facebook.com">{% include './icon.html' with {title: "facebook", size: "small"} %}</a></i>
+      <i><a href="http://twitter.com">{% include './icon.html' with {title: "twitter", size: "small"} %}</a></i>
+      <i><a href="http://telegram.com">{% include './icon.html' with {title: "telegram", size: "small"} %}</a></i>
+      <i><a href="https://chococake.bandcamp.com/releases">{% include './icon.html' with {title: "bandcamp", size: "small"} %}</a></i>
+    </div>
 
-  <button class="header__hamburger header__hamburger--cross">
-    <span>toggle menu</span>
-  </button>
+    <button class="header__hamburger header__hamburger--cross">
+      <span>toggle menu</span>
+    </button>
+  </div>
 </header>

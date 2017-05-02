@@ -1,168 +1,36 @@
 .album {
   background-color: #fff;
   text-align: center;
-  margin-top: 50px;
-
-  &__playlist {
-    padding-top: 100px;
-  }
+  padding: 50px 0;
 
   &__container {
-    padding: 0 150px;
+    @media (--tablet) {
+      width: 90%;
+    }
+
+    @media (--mobile) {
+      width: 100%;
+    }
+  }
+
+  &__playlist {
   }
 
   &__title {
-    margin-top: 100px;
-  }
+    margin-bottom: 40px !important;
 
-  &__icons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 50px;
-    align-items: center;
-  }
-
-  &__play-button {
-    background: url(../img/play.png) no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-  }
-
-  &__pause-button {
-    background: url(../img/pause.png) no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-  }
-
-  &__player-container {
-    margin-left: 50px;
-    margin-right: 50px;
-
-    &__title {
-      font-family: var(--gilroy);
-      font-weight: normal;
-      letter-spacing: 0.5em;
-      font-size: 26px;
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 10px;
-      text-transform: uppercase;
+    @media (--tablet) {
+      font-size: 30px;
     }
 
-    &__line {
-      text-align: center;
-      width: 900px;
-      height: 5px;
-      background-color: rgb(25, 25, 25);
+    @media (--mobile) {
+      font-size: 18px;
     }
   }
 }
 
-.album-button {
-  margin-bottom: 50px;
-}
-
-/*Для мобильных устройств*/
-@media screen and (min-width: 320px) and (max-width: 414px){
-  .album {
-    max-width: 100%;
-  }
-
-  .album__container {
-    padding: 0;
-  }
-
-  .album__playlist {
-    padding: 10px 0;
-  }
-
-  .album__player-container {
-    margin-left: 20px;
-    margin-right: 0;
-  }
-
-  .album__title {
-    font-size: 18px;
-  }
-
-  .album-icons {
+.album-icons { /*TODO: move to .player__socials */
+  @media (--tablet) {
     display: none;
   }
-
-  .album__play-button {
-    display: flex;
-    width: 25px;
-    height: 25px;
-  }
-
-  .album__pause-button {
-    display: flex;
-    width: 25px;
-    height: 25px;
-  }
-
-  .album__player-container__title {
-    font-size: 15px;
-  }
-
-  .album__player-container__line {
-    height: 1px;
-    width: 230px;
-  }
 }
-
-/* Для планшетов */
-@media screen and (min-width: 768px) and (max-width: 1024px){
-  .album {
-    max-width: 100%;
-  }
-
-  .album__container {
-    padding: 0;
-  }
-
-  .album__playlist {
-    padding: 10px 0;
-  }
-
-  .album__player-container {
-    margin-left: 20px;
-    margin-right: 0;
-  }
-
-  .album__title {
-    font-size: 30px;
-  }
-
-  .album-icons {
-    display: none;
-  }
-
-  .album__play-button {
-    display: flex;
-    width: 25px;
-    height: 25px;
-  }
-
-  .album__pause-button {
-    display: flex;
-    width: 25px;
-    height: 25px;
-  }
-
-  .album__player-container__title {
-    font-size: 15px;
-  }
-
-  .album__player-container__line {
-    height: 1px;
-    width: 550px;
-  }
-}
-
-/*TODO (orientation: landscape)*/

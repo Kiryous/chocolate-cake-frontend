@@ -1,59 +1,24 @@
-<div class="album album__container">
-  <h2 class="album__title title title--titleblack">Послушай наш <span class="title--titlepink">&nbsp;новый&nbsp;</span> альбом</h2>
-  <div class="album__playlist">
+{% set songs =[
+    {'title': '7:30 утра', 'pause': true},
+    {'title': 'В пустой квартире'},
+    {'title': 'Мой виноградный день'},
+    {'title': 'Торт'},
+    {'title': 'Прямо сейчас'},
+  ]
+%}
 
-    <div class="album__icons">
-      <div class="album__pause-button"></div>
-      <div class="album__player-container">
-        <h2 class="album__player-container__title">7:30 утра</h2>
-        <div class="album__player-container__line"></div>
-      </div>
-      <a class="album-icons" href="http://vk.com/choco_tort">{% include './icon.html' with {title: "vk", size: "mid"} %}</a>
-      <a class="album-icons" href="http://itunes.com">{% include './icon.html' with {title: "itunes", size: "mid"} %}</a>
+<div class="album">
+  <div class="container album__container">
+    <h2 class="title title--titleblack album__title">
+      Послушай наш <span class="title--titlepink">&nbsp;новый&nbsp;</span> альбом
+    </h2>
+    <div class="album__playlist">
+      {% for song in songs %}
+        {% include './player.html' with song %}
+      {% endfor %}
     </div>
-
-    <div class="album__icons">
-      <div class="album__play-button"></div>
-      <div class="album__player-container">
-        <h2 class="album__player-container__title">7:30 утра</h2>
-        <div class="album__player-container__line"></div>
-      </div>
-      <a class="album-icons" href="http://vk.com/choco_tort">{% include './icon.html' with {title: "vk", size: "mid"} %}</a>
-      <a class="album-icons" href="http://itunes.com">{% include './icon.html' with {title: "itunes", size: "mid"} %}</a>
+    <div class="album__action">
+      {% include './button.html' with {text: 'Купить альбом', url: '/album.html'} %}
     </div>
-
-    <div class="album__icons">
-      <div class="album__play-button"></div>
-      <div class="album__player-container">
-        <h2 class="album__player-container__title">7:30 утра</h2>
-        <div class="album__player-container__line"></div>
-      </div>
-      <a class="album-icons" href="http://vk.com/choco_tort">{% include './icon.html' with {title: "vk", size: "mid"} %}</a>
-      <a class="album-icons" href="http://itunes.com">{% include './icon.html' with {title: "itunes", size: "mid"} %}</a>
-    </div>
-
-    <div class="album__icons">
-      <div class="album__play-button"></div>
-      <div class="album__player-container">
-        <h2 class="album__player-container__title">7:30 утра</h2>
-        <div class="album__player-container__line"></div>
-      </div>
-      <a class="album-icons" href="http://vk.com/choco_tort">{% include './icon.html' with {title: "vk", size: "mid"} %}</a>
-      <a class="album-icons" href="http://itunes.com">{% include './icon.html' with {title: "itunes", size: "mid"} %}</a>
-    </div>
-
-    <div class="album__icons">
-      <div class="album__play-button"></div>
-      <div class="album__player-container">
-        <h2 class="album__player-container__title">7:30 утра</h2>
-        <div class="album__player-container__line"></div>
-      </div>
-      <a class="album-icons" href="http://vk.com/choco_tort">{% include './icon.html' with {title: "vk", size: "mid"} %}</a>
-      <a class="album-icons" href="http://itunes.com">{% include './icon.html' with {title: "itunes", size: "mid"} %}</a>
-    </div>
-
-  </div>
-  <div class="album-button">
-    {% include 'button.html' with {text: 'Купить альбом', url: '/album.html'} %}
   </div>
 </div>

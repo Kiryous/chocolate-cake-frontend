@@ -14,17 +14,31 @@
   width: 80%;
   margin-left: 10%;
 
+  @media (--mobile) {
+    width: 100%;
+    margin: 0;
+  }
+
   &__item {
     display: flex;
     border-bottom: 5px solid var(--pink);
     height: 100px;
     padding: 70px 70px;
 
+    @media (--mobile) {
+      height: 90px;
+      padding: 50px 5px;
+    }
+
     &__place {
       color: var(--pink);
       font-size: 34px;
       width: 100%;
       display: flex;
+
+      @media (--mobile) {
+        font-size: 18px;
+      }
     }
 
     &__club {
@@ -32,6 +46,10 @@
       jusify-content: flex-start;
       width: 100%;
       font-size: 34px;
+
+      @media (--mobile) {
+        font-size: 18px;
+      }
     }
 
     &__time {
@@ -39,6 +57,10 @@
       justify-content: flex-end;
       width: 100%;
       display: flex;
+
+      @media (--mobile) {
+        font-size: 18px;
+      }
     }
   }
 }

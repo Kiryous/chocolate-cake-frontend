@@ -11,7 +11,7 @@
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between;
   }
 
   &__logo {
@@ -61,7 +61,7 @@
   }
 
   .header--pink {
-    width: 50%;
+    width: 100%;
   }
 
   .header__container {
@@ -69,8 +69,7 @@
   }
 
   .header__logo {
-    width: 80px;
-    height: 50px;
+    height: 96px;
   }
 
   .header__item {
@@ -95,7 +94,6 @@
     box-shadow: none;
     border-radius: none;
     border: none;
-    cursor: pointer;
     transition: background 0.3s;
   }
 
@@ -134,7 +132,7 @@
 
 
   .header__hamburger--cross {
-    background-color: #ff3264;
+    background-color: var(--pink);
   }
 
   .header__hamburger--cross span {
@@ -157,7 +155,7 @@
 
   /* состояние active при открытом меню  */
   .header__hamburger--cross.is-active {
-    background-color: #cb0032;
+    background-color: var(--pink);
   }
 
   .header__hamburger--cross.is-active span {

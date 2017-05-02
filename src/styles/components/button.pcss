@@ -15,6 +15,11 @@ a.button, .button {
     text-align: center;
     margin-right: 50px;
 
+    @media(--mobile) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
     &:hover {
       color: var(--pink);
       background: white;
@@ -32,7 +37,7 @@ a.button, .button {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 568px) and (max-width: 1024px){
   a.button {
     padding: 10px 10px;
     font-size: 15px;

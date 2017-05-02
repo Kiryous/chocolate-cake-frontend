@@ -16,10 +16,21 @@
     margin-bottom: 30px;
     margin-left: 20%;
 
+    @media(--mobile) {
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
+
     &__card {
       display: inline-block;
       height: 700px;
       width: 300px;
+
+      @media(--mobile) {
+        height: 650px;
+        width: 250px;
+      }
 
       &__caption {
         font-family: var(--gilroy);
@@ -38,6 +49,11 @@
         width: 300px;
         display: block;
         margin-bottom: 20px;
+
+        @media(--mobile) {
+          height: 450px;
+          width: 250px;
+        }
       }
     }
 

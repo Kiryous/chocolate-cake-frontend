@@ -60,9 +60,11 @@
 .follow {
   width: 700px;
   position: relative;
-  margin: 0;
-  top: 25%;
-  left: 25%;
+  margin: 0 auto;
+
+  @media(--mobile) {
+    width: 100%;
+  }
 
   &:before {
     width: 50px;
@@ -82,7 +84,7 @@
     border-bottom: 5px solid var(--pink);
     border-right: 5px solid var(--pink);
     top: 150;
-    left: 700;
+    left: 655;
     position: absolute;
   }
 }

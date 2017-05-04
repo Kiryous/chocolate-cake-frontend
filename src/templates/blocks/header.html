@@ -8,7 +8,9 @@
 %}
 <header class="header header--pink">
   <div class="container header__container">
-    <div class="header__logo"></div>
+    <div class="header__logo">
+      <a class="header__logo--link" href="/index.html"></a>
+    </div>
     <nav class="nav header__nav">
       {% for item in items %}
         {% include './header-item.html' with item %}

@@ -21,6 +21,15 @@
     flex-shrink: 0;
     background: url("../img/logo.png") center no-repeat;
     background-size: 100%;
+
+    &--link {
+      display: inline-block;
+      height: 100px;
+      width: 160px;
+      @media (--mobile) {
+        display: none;
+      }
+    }
   }
 
   &__nav {

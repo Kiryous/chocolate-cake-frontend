@@ -5,27 +5,30 @@
     --hover: rgb(10, 10, 10);
     --visited: rgb(3, 9, 4);
     --pink: #f94084;
+    --lightpink: rgba(255,182,193, 0.3);
+    --gray: rgb(43,43,43);
     --pinktitle: #f7598c;
     --blacktitle: rgba(0,0,0,0.7);
 }
 
 @font-face {
 	font-family: 'Gilroy';
-	src: local('Gilroy'), 
+	src: local('Gilroy'),
 		 url('../fonts/Gilroy-Light.woff2') format('woff2'),
 		 url('../fonts/Gilroy-Light.woff') format('woff');
-	font-style: normal;
+  font-style: normal;
 	font-weight: 300;
 }
 
 @font-face {
 	font-family: 'Gilroy';
-	src: local('Gilroy'), 
+	src: local('Gilroy'),
 		 url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
 		 url('../fonts/Gilroy-ExtraBold.woff') format('woff');
-	font-style: normal;
-	font-weight: bold;
+  font-style: normal;
+  font-weight: bold;
 }
 
-@custom-media --latex-tablet (width <= 1000px);
-@custom-media --latex-mobile (width <= 640px);
+@custom-media --tablet (width <= 1000px);
+@custom-media --mobile (width <= 640px);
+@custom-media --smallmobile (width <= 450px);

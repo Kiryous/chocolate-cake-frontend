@@ -1,0 +1,37 @@
+<div class="social social__container">
+  <div class="social__background">
+    <div class="social__links">
+      <h1 class="title title--titleblack">
+        Найди нас <span class="title--titlepink">в&nbsp;социальных сетях&nbsp;</span>
+      </h1>
+      <div class="social__links__icons">
+        <div class="social__links__icons--line">
+          <a href="http://vk.com/choco_tort">
+            {% include './icon.html' with {title: "vk", size: "big", style: "pink"} %}
+          </a>
+        </div>
+        <div class="social__links__icons--line">
+          <a href="http://soundcloud.com">
+            {% include './icon.html' with {title: "sc", size: "big", style: "pink"} %}
+          </a>
+        </div>
+        <div class="social__links__icons--line">
+          <a href="http://itunes.com">
+            {% include './icon.html' with {title: "itunes", size: "big", style: "pink"} %}
+          </a>
+        </div>
+      </div>
+      <div class="follow">
+        <h1 class="title title--titleblack">Подпишись на рассылку</h1>
+        <div class="follow-container">
+          <form action="#" class="follow-form">
+            <input class="follow-form__input" type="text" name="email" placeholder="your@email.com">
+            <button class="button follow-form__button" type="button" name="button">
+              Подписаться
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

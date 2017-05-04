@@ -1,0 +1,36 @@
+.album {
+  background-color: #fff;
+  text-align: center;
+  padding: 50px 0;
+
+  &__container {
+    @media (--tablet) {
+      width: 90%;
+    }
+
+    @media (--mobile) {
+      width: 100%;
+    }
+  }
+
+  &__playlist {
+  }
+
+  &__title {
+    margin-bottom: 40px !important;
+
+    @media (--tablet) {
+      font-size: 30px;
+    }
+
+    @media (--mobile) {
+      font-size: 22px;
+    }
+  }
+}
+
+.album-icons { /*TODO: move to .player__socials */
+  @media (--tablet) {
+    display: none;
+  }
+}

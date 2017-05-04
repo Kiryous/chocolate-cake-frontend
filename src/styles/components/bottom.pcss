@@ -1,0 +1,36 @@
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (--mobile) {
+    justify-content: center;
+  }
+
+  &--pink {
+    background: var(--pink);
+  }
+
+  &__logo {
+    width: 160px;
+    height: 100px;
+    padding: 0;
+    flex-shrink: 0;
+    background: url("../img/logo.png") center no-repeat;
+    background-size: 100%;
+
+    @media (--mobile) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+
+    @media (--mobile) {
+      font-size: 15px;
+      color: color(var(--gray) a(0.7)) !important;
+    }
+  }
+
+}

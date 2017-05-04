@@ -1,0 +1,19 @@
+<a 
+  href="{{ link }}" 
+  class="news-card {% if style %}news-card--{{style}}{% endif %}"
+  style="background-image: url({{image}});"
+>
+  <div class="news-card__content">
+    <div class="news-card__date">
+      {{date}}
+    </div>
+    <h2 class="news-card__title">
+      {{title}}
+    </h2>
+    {% if location %}
+      <div class="news-card__location">
+        {{ location }}
+      </div>
+    {% endif %}
+  </div>
+</a>

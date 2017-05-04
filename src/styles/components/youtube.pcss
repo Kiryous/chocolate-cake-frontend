@@ -1,0 +1,29 @@
+.youtube {
+  background: rgb(29, 31, 33);
+  display: block;
+  padding: 50px 0;
+  margin-bottom: 100px;
+
+  &__container {
+    padding: 0 150px;
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @media (--mobile) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__js {
+    min-height: 100%;
+  }
+
+  &__buttons-container {
+    text-align: center;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="player js-player" data-source="">
+  <button 
+    class="player__control {% if pause %}player__control--pause{% else %}player__control--play{% endif %} js-player-play" 
+    title="Play"> </button>
+  <h2 class="player__title">{{title}}</h2>
+    <a class="player__external" href="http://vk.com/choco_tort">
+      {% include './icon.html' with {title: "vk", size: "mid"} %}
+    </a>
+    <a class="player__external" href="http://itunes.com">
+      {% include './icon.html' with {title: "itunes", size: "mid"} %}
+    </a>
+</div>

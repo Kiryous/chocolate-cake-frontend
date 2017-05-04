@@ -1,0 +1,31 @@
+{% set news =[
+    {
+      title: 'Презентация альбома', 
+      date: '10 мая', 
+      location: 'Санкт-Петербург',
+      image: 'assets/img/news2.jpg'      
+    },
+    {
+      title: 'Презентация альбома', 
+      date: '23 мая', 
+      location: 'Москва',
+      image: 'assets/img/news1.jpg'
+    },
+    {
+      title: 'Новый ударник',
+      image: 'assets/img/news3.jpg'
+    },
+  ]
+%}
+
+<div class="news">
+  <h1 class="title title--titleblack">
+    Узнавай о наших новостях 
+    <span class="title--titlepink">&nbsp;первым&nbsp;</span>
+  </h1>
+  <div class="news__container">
+    {% for one in news %}
+      {% include './news-card.html' with one %}
+    {% endfor %}
+  </div>
+</div>

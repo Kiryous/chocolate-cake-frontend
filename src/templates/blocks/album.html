@@ -1,0 +1,24 @@
+{% set songs =[
+    {'title': '7:30 утра', 'pause': true},
+    {'title': 'В пустой квартире'},
+    {'title': 'Мой виноградный день'},
+    {'title': 'Торт'},
+    {'title': 'Прямо сейчас'},
+  ]
+%}
+
+<div class="album">
+  <div class="container album__container">
+    <h2 class="title title--titleblack album__title">
+      Послушай наш <span class="title--titlepink">&nbsp;новый&nbsp;</span> альбом
+    </h2>
+    <div class="album__playlist">
+      {% for song in songs %}
+        {% include './player.html' with song %}
+      {% endfor %}
+    </div>
+    <div class="album__action">
+      {% include './button.html' with {text: 'Купить альбом', url: '/album.html'} %}
+    </div>
+  </div>
+</div>

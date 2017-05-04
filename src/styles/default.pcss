@@ -6,6 +6,16 @@
   text-size-adjust: none;
 }
 
+h1, h2, h3, .title {
+  font-family: var(--gilroy);
+  font-weight: bold;
+  font-size: 40px;
+
+  @media (--mobile) {
+    font-size: 22px;
+  }
+}
+
 /* Формы */
 input, textarea, button {
   outline: none;
@@ -26,11 +36,7 @@ html {
 
 body {
   font-family: var(--gilroy);
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 20px;
 }
-
 /* Ссылки без дефолтного подчёркивания */
 a {
   text-decoration: none;

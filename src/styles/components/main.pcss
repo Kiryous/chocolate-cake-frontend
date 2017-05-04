@@ -1,37 +1,37 @@
 .main {
-  width: 100vw;
   min-height: 100vh;
   background: url("../img/mainPhoto.png") no-repeat;
   background-size: cover;
-}
+  background-position: 50% 0;
 
-.flex-container-bot {
-  display: flex;
-  justify-content: center;
-  align-item: flex-end;
-  align-self: flex-end;
-  justify-content: space-around;
-}
+  &__container {
+    padding: 0 150px;
+  }
 
-.inner-flex {
-  margin-bottom: auto;
-  padding-bottom: 40px;
-  display: flex;
-  flex-wrap: wrap-reverse;
-  align-item: center;
+  &__container-bottom {
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 50px;
+  }
 }
 
 .title {
-  display: flex;
-  justify-content: center;
-  align-item: center;
-  line-height: 2em;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
   &--titlepink {
     color: var(--pinktitle);
   }
+
   &--titleblack {
     color: var(--blacktitle);
   }
+}
+
+.main-button {
+  text-align: center;
 }

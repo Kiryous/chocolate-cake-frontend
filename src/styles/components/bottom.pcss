@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (--mobile) {
+    justify-content: center;
+  }
+
   &--pink {
     background: var(--pink);
   }
@@ -15,7 +19,7 @@
     background: url("../img/logo.png") center no-repeat;
     background-size: 100%;
 
-    @media(--mobile) {
+    @media (--mobile) {
       display: none;
     }
   }
@@ -23,9 +27,9 @@
   &__text {
     font-size: 20px;
 
-    @media(--mobile) {
+    @media (--mobile) {
       font-size: 15px;
-      color: rgba(56,56,56,0.5) !important;
+      color: color(var(--gray) a(0.7)) !important;
     }
   }
 

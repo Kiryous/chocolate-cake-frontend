@@ -22,54 +22,82 @@
 
   &--instagram {
     background: url("../img/instagram.svg") no-repeat;
+
     &:hover {
       background: svg-load("../../img/instagram.svg", fill=white);
     }
   }
+
   &--twitter {
     background: url("../img/twitter.svg") no-repeat;
+
     &:hover {
       background: svg-load("../../img/twitter.svg", fill=white);
     }
   }
+
   &--facebook {
     background: url("../img/facebook.svg") no-repeat;
+
     &:hover {
       background: svg-load("../../img/facebook.svg", fill=white);
     }
   }
+
   &--telegram {
     background: url("../img/telegram.svg") no-repeat;
+
     &:hover {
       background: svg-load("../../img/telegram.svg", fill=white);
     }
   }
+
   &--youtube {
     background: url("../img/youtube.svg") no-repeat;
+
     &:hover {
       background: svg-load("../../img/youtube.svg", fill=white);
     }
   }
+
   &--apple {
     background: url("../img/apple.svg") no-repeat;
+
     &:hover {
       background: svg-load("../../img/apple.svg", fill=white);
     }
   }
+
   &--vk {
     background: url("../img/vk.svg") no-repeat;
+
+    &.icon--pink {
+      background: svg-load("../../img/vk.svg", fill=var(--pink));
+    }
   }
+
   &--bandcamp {
     background: url("../img/bandcamp.svg") no-repeat;
+
     &:hover {
       background: svg-load("../../img/bandcamp.svg", fill=white);
     }
   }
+
   &--sc {
     background: url("../img/soundcloud.svg") no-repeat;
+
+    &.icon--pink {
+      background: svg-load("../../img/soundcloud.svg", fill=var(--pink));
+    }
   }
+
   &--itunes {
     background: url("../img/itunes.svg") no-repeat;
     background-size: cover;
+
+    &.icon--pink {
+      background-image: svg-load("../../img/itunes.svg", fill=var(--pink));
+    }
   }
 }

@@ -22,13 +22,18 @@
     background: url("../img/logo.png") center no-repeat;
     background-size: 100%;
 
+    @media (--mobile) {
+      width: 100px;
+      height: 62.5px;
+    }
+
     &--link {
-      display: inline-block;
-      height: 100px;
-      width: 160px;
-      @media (--mobile) {
-        display: none;
-      }
+     display: inline-block;
+     height: 100px;
+     width: 160px;
+     @media (--mobile) {
+       display: none;
+     }
     }
   }
 

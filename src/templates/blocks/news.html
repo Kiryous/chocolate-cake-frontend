@@ -1,38 +1,38 @@
+{% set news =[
+    {
+      title: 'Презентация альбома',
+      date: '10 мая',
+      location: 'Санкт-Петербург',
+      image: 'assets/img/news2.jpg'
+    },
+    {
+      title: 'Презентация альбома',
+      date: '23 мая',
+      location: 'Москва',
+      image: 'assets/img/news1.jpg'
+    },
+    {
+      title: 'Новый ударник',
+      date: '15 декабря',
+      location: 'Новосибирск',
+      image: 'assets/img/news3.jpg'
+    },
+  ]
+%}
+
 <div class="news">
-  <h1 class="title title--titleblack">Узнавай о наших новостях <span class="title--titlepink">&nbsp;первым&nbsp;</span></h1>
+  <h1 class="title title--titleblack">
+    Узнавай о наших новостях
+    <span class="title--titlepink">&nbsp;первым&nbsp;</span>
+  </h1>
   <div class="news__container">
-    <div class="line-container">
-      <div class="img img--img1">
-        <span class="line-container__title-news line-container__title-news--date">9 декабря &mdash; Петербург</span>
-        <a href="/news.html"> <h1 class="line-container__title-news">Презентация альбома</h1></a>
-      </div>
-
-      <div class="img img--img2">
-        <span class="line-container__title-news line-container__title-news--date">9 декабря &mdash; Петербург</span>
-        <a href="/news.html"> <h1 class="line-container__title-news">Презентация альбома</h1></a>
-      </div>
-
-      <div class="img img--img3">
-        <span class="line-container__title-news line-container__title-news--date">9 декабря &mdash; Петербург</span>
-        <a href="/news.html"> <h1 class="line-container__title-news">Презентация альбома</h1></a>
-      </div>
-    </div>
-
-    <div class="line-container">
-      <div class="img img--img2">
-        <span class="line-container__title-news line-container__title-news--date">9 декабря &mdash; Петербург</span>
-        <a href="/news.html"> <h1 class="line-container__title-news">Презентация альбома</h1></a>
-      </div>
-
-      <div class="img img--img3">
-        <span class="line-container__title-news line-container__title-news--date">9 декабря &mdash; Петербург</span>
-        <a href="/news.html"> <h1 class="line-container__title-news">Презентация альбома</h1></a>
-      </div>
-
-      <div class="img img--img1">
-        <span class="line-container__title-news line-container__title-news--date">9 декабря &mdash; Петербург</span>
-        <a href="/news.html"> <h1 class="line-container__title-news">Презентация альбома</h1></a>
-      </div>
-    </div>
+    {% for one in news %}
+      {% include './news-card.html' with one %}
+    {% endfor %}
+  </div>
+  <div class="news__container">
+    {% for one in news %}
+      {% include './news-card.html' with one %}
+    {% endfor %}
   </div>
 </div>

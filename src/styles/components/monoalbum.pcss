@@ -1,0 +1,94 @@
+.monoalbum {
+  background: white;
+  min-height: 100vh;
+  margin: 0;
+
+  @media(--mobile) {
+    padding: 100px 0;
+  }
+
+  &__container {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+
+    @media (--mobile) {
+      padding: 0;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.album-preview {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: flex-start;
+
+  &__cover {
+    width: 400px;
+    height: 400px;
+    background-image: url(../img/album1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 100px;
+  }
+
+  &__description {
+
+    &--text {
+      font-size: 30px;
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 20px;
+    }
+
+    &--date {
+    text-decoration: none;
+    font-size: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+    }
+  }
+}
+
+.monoalbum-playlist {
+  margin-bottom: 150px;
+}
+
+.monoalbum-title {
+  text-decoration: underline;
+}
+
+.monoalbum-share {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.monoalbum-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.monoalbum-icon {
+  display: inline-flex;
+  margin-right: 100px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.monoalbum-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}

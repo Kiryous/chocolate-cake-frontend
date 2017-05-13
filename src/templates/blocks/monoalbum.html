@@ -1,0 +1,52 @@
+{% set songs =[
+    {'title': '7:30 утра', 'pause': true},
+    {'title': 'В пустой квартире'},
+    {'title': 'Мой виноградный день'},
+    {'title': 'Торт'},
+    {'title': 'Прямо сейчас'},
+  ]
+%}
+
+<div class="monoalbum monoalbum__container">
+  <h1 class="title title--titleblack">
+    Третья
+    <span class="title--titlepink">&nbsp;ночь&nbsp;</span>
+    без сна
+  </h1>
+  <div class="album-preview">
+    <div class="album-preview__cover"></div>
+    <div class="album-preview__description">
+      <h2 class="album-preview__description--text">Дата выхода:</h2>
+      <span class="album-preview__description--date">25/12/2015</span>
+      <div>{% include 'button.html' with {text: 'Слушать альбом', url: 'http://itunes.com'} %}</div>
+    </div>
+  </div>
+  <div class="album__playlist monoalbum-playlist">
+    {% for song in songs %}
+      {% include './player.html' with song %}
+    {% endfor %}
+  </div>
+  <h1 class="title title--titleblack monoalbum-title">
+    Понравился
+    <span class="title--titlepink">&nbsp;альбом?</span>
+  </h1>
+  <span class="monoalbum-share">Ты можешь поделиться с друзьями</span>
+  <div class="monoalbum-icons">
+    <div class="monoalbum-icon">
+      <a href="http://vk.com/choco_tort">
+        {% include './icon.html' with {title: "vk", size: "big"} %}
+      </a>
+    </div>
+    <div class="monoalbum-icon">
+      <a href="http://twitter.com">
+        {% include './icon.html' with {title: "twitter", size: "big"} %}
+      </a>
+    </div>
+    <div class="monoalbum-icon">
+      <a href="http://facebook.com">
+        {% include './icon.html' with {title: "facebook", size: "big"} %}
+      </a>
+    </div>
+  </div>
+  <div class="monoalbum-button">{% include 'button.html' with {text: 'Перейти к альбомам', url: '/album.html'} %}</div>
+</div>

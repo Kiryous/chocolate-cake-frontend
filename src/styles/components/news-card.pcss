@@ -42,16 +42,29 @@
   &__title {
     font-size: 40px;
     text-transform: uppercase;
+
+    @media (--mobile) {
+      font-size: 20px;
+    }
+
   }
 
   &__date {
     font-size: 30px;
     text-transform: none;
+
+    @media (--mobile) {
+      font-size: 20px;
+    }
   }
 
   &__location {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 5px;
+
+    @media (--mobile) {
+      color: white;
+    }
   }
 }

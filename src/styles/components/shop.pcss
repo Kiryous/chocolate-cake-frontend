@@ -17,12 +17,14 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @media (--table) {
+    @media (--tablet) {
       width: 100%;
     }
 
     @media (--mobile) {
-      width: 80%;
+      width: 100%;
+      margin-left: 10%;
+
     }
 
     @media (--smallmobile) {
@@ -43,11 +45,7 @@
       }
 
       @media (--mobile) {
-        width: 150px;
-
-        &:nth-child(-n+1) {
-          display: none;
-        }
+        width: 200px;
       }
 
       &__caption {

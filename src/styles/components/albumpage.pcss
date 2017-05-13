@@ -1,8 +1,13 @@
 .fullalbum {
   width: 100vw;
+  min-height: 100vh;
 
   &__container {
     padding: 130px 150px;
+
+    @media(--mobile) {
+      padding: 100px 0;
+    }
   }
 }
 
@@ -12,6 +17,15 @@
   @media(--mobile) {
     padding: 0;
   }
+}
+
+.line-container {
+  display: flex;
+
+  @media(--mobile) {
+    display: block;
+  }
+
 }
 
 .album-cover {
@@ -27,6 +41,13 @@
   -moz-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s ease;
+
+  @media(--mobile) {
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding: 150px 0;
+  }
 
   &--img1 {
     background-image: linear-gradient(transparent, var(--pink)), url(../img/album1.jpg);
@@ -58,10 +79,18 @@
     text-decoration: underline;
     text-transform: uppercase;
 
+    @media(--mobile) {
+      font-size: 22px;
+    }
+
     &--date {
       text-decoration: none;
       font-size: 30px;
       color: white;
+
+      @media(--mobile) {
+        font-size: 20px;
+      }
     }
   }
 }

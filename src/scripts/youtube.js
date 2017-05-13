@@ -61,3 +61,19 @@ var mySwiper = new Swiper ('.swiper-container', {
   // And if we need scrollbar
   scrollbar: '.swiper-scrollbar',
 })
+
+//newSlider
+
+$(document).ready(function(){
+  $("#owl").owlCarousel({
+	    center: false,
+	    items:2,
+	    loop:true,
+	    margin:0,
+	    responsive:{
+	        600:{
+	            items:4
+	        }
+	  	}
+	});
+});

@@ -1,14 +1,20 @@
 .videopage {
   background: white;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  padding: 100px 100px;
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  @media(--mobile) {
+    padding: 100px 0;
+  }
 
   &__container {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    padding: 0 0;
+    padding: 0 5%;
+    margin-bottom: 70px;
 
     @media (--tablet) {
       flex-wrap: wrap;
@@ -17,6 +23,8 @@
     @media (--mobile) {
       display: block;
       padding: 0;
+      width: 100%;
+      margin-bottom: 0;
     }
   }
 
@@ -28,7 +36,18 @@
 
   &__video {
     display: flex;
-    flex: 1 1 33.33%;
+    width: 30%;
+    margin-right: 5%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (--mobile) {
+      display: block;
+      padding: 0;
+      width: 100%;
+    }
   }
 
   &__js {
@@ -38,13 +57,20 @@
 }
 
 .swiper-container {
-    width: 600px;
-    height: 300px;
+    width: 90%;
+    height: 500px;
+    margin-left: 5%;
+
+    @media (--mobile) {
+      display: none;
+    }
 }
 
 .swiper-slide {
-  display: inline-block;
   background-image: url('../img/news3.jpg');
-  width: 100px;
-  height: 100px;
+  height: 400px;
+  width: 33.15%;
+  display: inline-flex;
+  jusify-content: center;
+  background-position: 30% 30%;
 }

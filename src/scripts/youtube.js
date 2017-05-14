@@ -65,7 +65,7 @@ var mySwiper = new Swiper ('.swiper-container', {
 //newSlider
 
 $(document).ready(function(){
-  $("#owl").owlCarousel({
+  $("#slider").owlCarousel({
 	    center: false,
 	    items:2,
 	    loop:true,

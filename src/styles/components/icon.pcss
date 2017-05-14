@@ -131,4 +131,14 @@
     }
   }
 
+  &--shopcart {
+    background: url("../img/shopping-cart.svg") no-repeat;
+    &.icon--gray {
+      background: svg-load("../../img/shopping-cart.svg", fill=rgba(0,0,0,0.7));
+    }
+    &:hover {
+      background: svg-load("../../img/shopping-cart.svg", fill=var(--pink));
+    }
+  }
+
 }

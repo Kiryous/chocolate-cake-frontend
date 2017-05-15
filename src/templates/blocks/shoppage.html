@@ -7,7 +7,38 @@
       <div class="card__photo">
       </div>
       <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
-      <div class="card__caption">Оформить заказ
+
+
+      <div class="modal" id="modalWindow">
+        <span class="modal__close" id="closeModal">
+          {% include './icon.html' with {title: "close", size: "small", style: "gray"} %}
+        </span>
+        <!-- <div class="modal__photo"></div> -->
+        <p class="modal__option"><b>Размер:</b> XL</p>
+        <p class="modal__option"><b>Цвет:</b> Белый</p>
+        <p class="modal__description"><b>Наш</b> мерч идеально впишется в вашу жизнь и станет любимой вещью</p>
+        <div class="modal__button">
+          {% include './icon.html' with {title: "heart", size: "small", style: "gray"} %}
+        </div>
+        <div class="modal__button">
+          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
+        </div>
+      </div>
+      <div class="overlay"></div>
+
+      <div class="card__caption"><a href="/" id="openModal">Оформить заказ</a>
+        <a href="/" class="shopcart-icon">
+          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
+        </a>
+      </div>
+    </div>
+
+
+    <div class="card shoppage-item">
+      <div class="card__photo">
+      </div>
+      <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
+      <div class="card__caption" id=""><a href="/">Оформить заказ</a>
         <a href="/" class="shopcart-icon">
           {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
         </a>
@@ -18,18 +49,7 @@
       <div class="card__photo">
       </div>
       <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
-      <div class="card__caption">Оформить заказ
-        <a href="/" class="shopcart-icon">
-          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
-        </a>
-      </div>
-    </div>
-
-    <div class="card shoppage-item">
-      <div class="card__photo">
-      </div>
-      <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
-      <div class="card__caption">Оформить заказ
+      <div class="card__caption"><a href="/">Оформить заказ</a>
         <a href="/" class="shopcart-icon">
           {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
         </a>
@@ -42,7 +62,7 @@
       <div class="card__photo">
       </div>
       <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
-      <div class="card__caption">Оформить заказ
+      <div class="card__caption"><a href="/">Оформить заказ</a>
         <a href="/" class="shopcart-icon">
           {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
         </a>
@@ -53,7 +73,7 @@
       <div class="card__photo">
       </div>
       <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
-      <div class="card__caption">Оформить заказ
+      <div class="card__caption"><a href="/">Оформить заказ</a>
         <a href="/" class="shopcart-icon">
           {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
         </a>
@@ -64,7 +84,7 @@
       <div class="card__photo">
       </div>
       <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
-      <div class="card__caption">Оформить заказ
+      <div class="card__caption"><a href="/">Оформить заказ</a>
         <a href="/" class="shopcart-icon">
           {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
         </a>

@@ -141,4 +141,24 @@
     }
   }
 
+  &--heart {
+    background: url("../img/heart.svg") no-repeat;
+    &.icon--gray {
+      background: svg-load("../../img/heart.svg", fill=rgba(0,0,0,0.7));
+    }
+    &:hover {
+      background: svg-load("../../img/heart.svg", fill=var(--pink));
+    }
+  }
+
+  &--close {
+    background: url("../img/cancel.svg") no-repeat;
+    &.icon--gray {
+      background: svg-load("../../img/cancel.svg", fill=rgba(0,0,0,0.7));
+    }
+    &:hover {
+      background: svg-load("../../img/cancel.svg", fill=var(--pink));
+    }
+  }
+
 }

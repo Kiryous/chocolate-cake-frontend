@@ -6,6 +6,20 @@
 
   &__container {
     padding: 100px 150px;
+
+    @media (--mobile) {
+      padding: 100px 0 50px 0;
+    }
+  }
+
+  &__item-first {
+    border-top: 5px solid var(--pink);
+    border-bottom: 5px solid var(--pink);
+
+    @media (--mobile) {
+      border-top: 3px solid var(--pink);
+      border-bottom: 3px solid var(--pink);
+    }
   }
 
   &__item {
@@ -16,13 +30,10 @@
     display: flex;
     justify-content: space-between;
 
-    &:first-child {
-      border-top: 5px solid var(--pink);
-    }
-
     @media (--mobile) {
-      height: 90px;
-      padding: 50px 5px;
+      height: 130px;
+      padding: 20px 5px;
+      border-bottom: 3px solid var(--pink);
     }
 
     &__place {
@@ -42,6 +53,7 @@
 
       @media (--mobile) {
         font-size: 18px;
+        margin-bottom: 0;
       }
     }
 
@@ -59,6 +71,11 @@
         display: inline-block;
         margin-left: 50px;
         color: rgba(0,0,0,0.9);
+
+        @media (--mobile) {
+          font-size: 18px;
+          margin-left: 0;
+        }
       }
     }
 
@@ -93,4 +110,8 @@
 .concert-tickets {
   display: block;
   width: 20%;
+}
+
+.vip {
+  color: var(--pink);
 }

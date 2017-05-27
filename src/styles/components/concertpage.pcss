@@ -1,11 +1,12 @@
 .concertpage {
   min-height: 100vh;
-  background-image: url(../img/concert_photo.png);
+  /*background-image: url(../img/concert_photo.png);*/
   background-size: cover;
   width: 100%;
 
   &__container {
     padding: 100px 150px;
+    background-color: rgb(255,233,237);
 
     @media (--mobile) {
       padding: 100px 0 50px 0;
@@ -25,7 +26,7 @@
   &__item {
     width: 100%;
     border-bottom: 5px solid var(--pink);
-    height: 200px;
+    height: 150px;
     padding: 10px 70px;
     display: flex;
     justify-content: space-between;
@@ -49,7 +50,7 @@
     &__club {
       display: block;
       font-size: 34px;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
 
       @media (--mobile) {
         font-size: 18px;
@@ -58,7 +59,7 @@
     }
 
     &__date {
-      font-size: 34px;
+      font-size: 30px;
       width: 100%;
       display: block;
 
@@ -70,7 +71,8 @@
         font-size: 30px;
         display: inline-block;
         margin-left: 50px;
-        color: rgba(0,0,0,0.9);
+        color: var(--pink);
+        /*color: rgba(0,0,0,0.9);*/
 
         @media (--mobile) {
           font-size: 18px;

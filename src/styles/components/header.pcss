@@ -76,6 +76,7 @@
 
   .header--pink {
     width: 100%;
+    height: 12%;
   }
 
   .header__container {
@@ -83,7 +84,8 @@
   }
 
   .header__logo {
-    height: 96px;
+    margin-top: -15px;
+    height: 60px;
   }
 
   .header__item {
@@ -100,7 +102,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-    width: 96px;
+    width: 76px;
     height: 96px;
     font-size: 0;
     text-indent: -9999px;
@@ -116,32 +118,34 @@
   }
 
   .header__hamburger span {
+    margin-top: -8px;
     display: block;
     position: absolute;
     top: 44px;
     left: 18px;
     right: 18px;
-    height: 8px;
+    height: 3px;
     background: white;
   }
 
   .header__hamburger span::before,
   .header__hamburger span::after {
+    /*margin-top: 3px;*/
     position: absolute;
     display: block;
     left: 0;
     width: 100%;
-    height: 8px;
+    height: 3px;
     background-color: #fff;
     content: "";
   }
 
   .header__hamburger span::before {
-    top: -20px;
+    top: -10px;
   }
 
   .header__hamburger span::after {
-    bottom: -20px;
+    bottom: -10px;
   }
 
 

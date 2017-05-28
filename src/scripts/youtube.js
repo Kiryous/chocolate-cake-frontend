@@ -43,37 +43,3 @@ function onYouTubeIframeAPIReady() {
 // function onYouTubeIframeAPIReady() {
 //   loadYoutubeVideo(document.querySelector('.js-title-video'), 'h78KZKdzR5Y');
 // }
-
-var mySwiper = new Swiper ('.swiper-container', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  speed: 400,
-  spaceBetween: 100,
-
-  // If we need pagination
-  pagination: '.swiper-pagination',
-
-  // Navigation arrows
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
-
-  // And if we need scrollbar
-  scrollbar: '.swiper-scrollbar',
-})
-
-//newSlider
-
-$(document).ready(function(){
-  $("#slider").owlCarousel({
-	    center: false,
-	    items:2,
-	    loop:true,
-	    margin:0,
-	    responsive:{
-	        600:{
-	            items:4
-	        }
-	  	}
-	});
-});

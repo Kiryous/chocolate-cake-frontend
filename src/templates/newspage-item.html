@@ -1,0 +1,11 @@
+{% extends 'blocks/base.html' %}
+
+{% block title %}
+Название новости — Шоколадный торт
+{% endblock title%}
+
+{% block body %}
+    {% include 'blocks/header.html' %}
+    {% include 'blocks/newspage-item.html' %}
+    {% include 'blocks/bottom.html' %}
+{% endblock body %}

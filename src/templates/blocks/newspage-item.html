@@ -1,0 +1,53 @@
+{% set songs =[
+    {'title': '7:30 утра', 'pause': true},
+    {'title': 'В пустой квартире'},
+    {'title': 'Мой виноградный день'},
+    {'title': 'Торт'},
+    {'title': 'Прямо сейчас'},
+  ]
+%}
+
+<div class="newspage-item newspage-item__container">
+  <h1 class="title title--titleblack">Новый
+  <span class="title--titlepink">&nbsp;альбом&nbsp;</span>
+  </h1>
+
+  <div class="newspage-item__cover">
+    <h1 class="newspage-item__cover--date">16/04/2017</h1>
+  </div>
+
+  <div class="newspage-item__content">
+    <div class="newspage-item__content--photo">
+      <div class="newspage-item__content--cover"></div>
+      <div class="newspage-item__content--link">
+        <a href="#" class="newspage-item__content--text-link">Еще фото</a>
+      </div>
+    </div>
+    <div class="newspage-item__content--text">
+      Йо, чекайте наш новый альбом! Шоколадный торт &mdash; Вдали от дома! 2017
+      Йо, чекайте наш новый альбом! Шоколадный торт &mdash; Вдали от дома! 2017
+      Йо, чекайте наш новый альбом! Шоколадный торт &mdash; Вдали от дома! 2017
+      Йо, чекайте наш новый альбом! Шоколадный торт &mdash; Вдали от дома! 2017
+      Йо, чекайте наш новый альбом! Шоколадный торт &mdash; Вдали от дома! 2017
+      Йо, чекайте наш новый альбом! Шоколадный торт &mdash; Вдали от дома! 2017
+      Йо, чекайте наш новый альбом! Шоколадный торт &mdash; Вдали от дома! 2017
+      Йо, чекайте наш новый альбом! Шоколадный торт &mdash; Вдали от дома! 2017
+    </div>
+  </div>
+
+  <div class="newspage-item__video">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/h78KZKdzR5Y" frameborder="0" allowfullscreen></iframe>
+    <div class="newspage-item__video--link">
+      <a href="#" class="newspage-item__video--text-link">Еще видео</a>
+    </div>
+  </div>
+
+  <div class="newspage-item__audio">
+    <div class="album__playlist newspage-item-playlist">
+      {% for song in songs %}
+        {% include './player.html' with song %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>

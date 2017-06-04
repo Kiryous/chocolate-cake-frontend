@@ -9,27 +9,21 @@
       <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
 
 
-      <div class="modal" id="modalWindow">
-        <span class="modal__close" id="closeModal">
-          {% include './icon.html' with {title: "close", size: "small", style: "gray"} %}
-        </span>
-        <!-- <div class="modal__photo"></div> -->
-        <p class="modal__option"><b>Размер:</b> XL</p>
-        <p class="modal__option"><b>Цвет:</b> Белый</p>
-        <p class="modal__description"><b>Наш</b> мерч идеально впишется в вашу жизнь и станет любимой вещью</p>
-        <div class="modal__button">
-          {% include './icon.html' with {title: "heart", size: "small", style: "gray"} %}
-        </div>
-        <div class="modal__button">
-          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
-        </div>
-      </div>
-      <div class="overlay"></div>
+      <div onclick="show('none')" id="modal-wrap"></div>
+      <div id="modal-window">
+      <div class="modal__close" onclick="show('none')"></div>
+      <div class="modal__photo"></div>
+      <p class="modal__price">Цена</p>
+      <p class="modal__size">Размер</p>
+      <p class="modal__description">Описание</p>
 
-      <div class="card__caption"><a href="/" id="openModal">Оформить заказ</a>
-        <a href="/" class="shopcart-icon">
+      <button class="button" type="button" name="button">В корзину</button>
+      </div>
+
+      <div class="card__caption"><a href="/">Оформить заказ</a>
+        <button class="shopcart-icon" onclick="show('block')">
           {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
-        </a>
+        </button>
       </div>
     </div>
 

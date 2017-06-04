@@ -5,7 +5,7 @@ var popupModule = (function () {
 	};
 
 	var _vars = {
-		popups : ['order', 'call', 'register-seminar', 'action', 'question', 'order-get', 'partners', 'consult', 'buy', 'plans'],
+		// popups : ['order', 'call', 'register-seminar', 'action', 'question', 'order-get', 'partners', 'consult', 'buy', 'plans'],
 		successPopupClass : '.popup--js-success',
 		errorPopupClass : '.popup--js-error',
 		popupTextClass : '.popup__text'
@@ -138,15 +138,15 @@ var formsModule = (function () {
 	};
 
 	var _vars = {
-		formsClass : '.js--form',
+		formsClass : '.follow-form',
 		inputClass : 'input',
-		msgClass : 'textarea',
-		inputNames : ['tel', 'email']
+		// msgClass : 'textarea',
+		inputNames : ['email']
 	};
 
-	var TODO = {
-		_formsListener : ['Замена текста на кнопке и её блокировка, пока не получен ответ от сервера', 'Использование массива для обхода полей без явного указания их названий']
-	};
+	// var TODO = {
+	// 	_formsListener : ['Замена текста на кнопке и её блокировка, пока не получен ответ от сервера', 'Использование массива для обхода полей без явного указания их названий']
+	// };
 
 	var _setUpListeners = function () {
 		_formsListener();
@@ -166,9 +166,9 @@ var formsModule = (function () {
 						method = form.method,
 						action = form.action,
 						succMsg = form.dataset.msg,
-						tel = false,
+						// tel = false,
 						email = false,
-						msg = form.querySelector(_vars.msgClass) || false,
+						// msg = form.querySelector(_vars.msgClass) || false,
 						json;
 
 				if (!method || !action) {
@@ -178,31 +178,27 @@ var formsModule = (function () {
 
 				Array.prototype.forEach.call(inputs, function(input, index) {
 
-					if (input.name === 'tel') {
-						tel = input.value;
-					};
-
 					if (input.name === 'email') {
 						email = input.value;
 					};
 				});
 
-				if (msg) msg = msg.value;
+				// if (msg) msg = msg.value;
 
-				if (!tel && !email) {
+				if (!email) {
 					console.error('Ошибка в formsModule._formsBindSubmit: у формы ' + form + ' не заполнены контактные данные.');
-					popupModule.showError('Пожалуйста, введите ваши контактные данные!');
+					popupModule.showError('Пожалуйста, введите ваш Email!');
 					return false;
 				};
 
-				if (!tel) tel = 'Не заполнено';
+				// if (!tel) tel = 'Не заполнено';
 				if (!email) email = 'Не заполнено';
-				if (!msg) msg = 'Не заполнено';
+				// if (!msg) msg = 'Не заполнено';
 
 				json = {
-					tel: tel,
-					email: email,
-					msg: msg
+					// tel: tel,
+					email: email
+					// msg: msg
 				};
 
 				_sendAction(json, method, action, succMsg);

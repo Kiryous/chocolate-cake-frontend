@@ -134,6 +134,12 @@
 	top: 0;
 	bottom: 0;
 	padding: 30px;
+
+  @media (--mobile) {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+  }
 }
 
 #modal-wrap {
@@ -147,6 +153,10 @@
   background-color: rgba(1, 1, 1, 0.725);
   z-index: 100;
   overflow: auto;
+
+  @media (--mobile) {
+    display: none;
+  }
 }
 
 .modal {
@@ -155,12 +165,22 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+
+    @media (--mobile) {
+      margin-bottom: 50px;
+    }
+
   }
 
   &__data {
     width: 600px;
     text-align: left;
     padding-right: 20px;
+
+    @media (--mobile) {
+      width: 50%;
+      padding-right: 0px;
+    }
   }
 
   &__close {
@@ -171,6 +191,12 @@
   	margin-bottom: 30px;
     display: block;
   	cursor: pointer;
+
+    @media (--mobile) {
+      width: 15px;
+      height: 15px;
+      margin-bottom: 10px;
+    }
   }
 
   &__photo {
@@ -181,6 +207,11 @@
     padding: 0;
     margin: 0;
     background-position: 50% 50%;
+
+    @media (--mobile) {
+      width: 45%;
+      height: 200px;
+    }
   }
 
   &__price {
@@ -188,6 +219,11 @@
     font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: 10px;
+
+    @media (--mobile) {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
   }
 
   &__size {
@@ -195,18 +231,30 @@
     font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: 50px;
+
+    @media (--mobile) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
   }
 
   &__description {
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 1px;
+
+    @media (--mobile) {
+      font-size: 18px;
+    }
   }
 
   &__text {
     font-size: 23px;
     font-weight: normal;
     letter-spacing: 1px;
-    margin-left: 10px;
+
+    @media (--mobile) {
+      font-size: 16px;
+    }
   }
 }

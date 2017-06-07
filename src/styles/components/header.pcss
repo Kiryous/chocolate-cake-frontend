@@ -103,14 +103,27 @@
     list-style-type: none;
   }
 
-  .is-active {
-    /*background-color: var(--pink);*/
+  .active-menu {
+    background-color: var(--pink);
     margin-top: 20px;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 205px;
     z-index: 1000;
     font-size: 16px;
     text-transform: uppercase;
+    position: fixed;
+    text-align: center;
+    top: 40px;
+    right: 0;
+
+    &__item {
+      padding: 10px;
+      border-top: 2px solid var(--lightpink);
+    }
+  }
+
+  #active-menu {
+    display: none;
   }
 
   .hamburger:hover {

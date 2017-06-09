@@ -1,0 +1,268 @@
+.shoppage {
+  min-height: 100vh;
+
+  &__container {
+    padding: 100px 150px;
+
+    @media (--mobile) {
+      padding-top: 70px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  &__items {
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto 30px;
+    text-align: center;
+
+    @media (--tablet) {
+      width: 100%;
+    }
+
+    @media (--mobile) {
+      width: 100%;
+      display: column;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 0;
+    }
+  }
+
+}
+
+.shoppage-item {
+  margin-right: 150px;
+  display: inline-block;
+
+  &:last-child {
+    margin-right: 0;
+
+    @media (--mobile) {
+      margin: 0 auto;
+    }
+
+  }
+
+    @media (--mobile) {
+      margin: 0 auto;
+    }
+}
+
+.card {
+  width: 350px;
+  position: relative;
+
+  @media (--mobile) {
+    width: 250px;
+    display: block;
+    text-align: center;
+
+  }
+
+  &__caption {
+    font-family: var(--gilroy);
+    font-size: 26px;
+    text-align: left;
+    letter-spacing: 3px;
+
+    @media (--mobile) {
+      width: 100%;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 10px;
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__photo {
+    background: url("../img/shopItem.jpg") no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin-bottom: 20px;
+
+    @media (--mobile) {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+      height: 350px;
+    }
+  }
+
+  @media (--mobile) {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+.shoppage-button {
+  display: flex;
+  justify-content: center;
+
+  @media (--mobile) {
+    padding-top: 20px;
+  }
+}
+
+.shopcart-icon {
+  display: inline-block;
+  margin-left: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#modal-window {
+  width: 1000px;
+  height: 800px;
+	margin: 50px auto;
+	display: none;
+	background: #fff;
+	z-index: 200;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 30px;
+
+  @media (--mobile) {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+  }
+}
+
+#modal-wrap {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 16px;
+  background-color: rgba(1, 1, 1, 0.725);
+  z-index: 100;
+  overflow: auto;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.modal {
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @media (--mobile) {
+      margin-bottom: 50px;
+    }
+
+  }
+
+  &__data {
+    width: 600px;
+    text-align: left;
+    padding-right: 20px;
+
+    @media (--mobile) {
+      width: 50%;
+      padding-right: 0px;
+    }
+  }
+
+  &__close {
+    background: url("../img/cross.png") no-repeat;
+    background-size: 100%;
+    width: 30px;
+  	height: 30px;
+  	margin-bottom: 30px;
+    display: block;
+  	cursor: pointer;
+
+    @media (--mobile) {
+      width: 15px;
+      height: 15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__photo {
+    background: url("../img/shopItem.jpg") no-repeat;
+    background-size: cover;
+    width: 300px;
+  	height: 500px;
+    padding: 0;
+    margin: 0;
+    background-position: 50% 50%;
+
+    @media (--mobile) {
+      width: 45%;
+      height: 200px;
+    }
+  }
+
+  &__price {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+    @media (--mobile) {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__size {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+
+    @media (--mobile) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    @media (--mobile) {
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    font-size: 23px;
+    font-weight: normal;
+    letter-spacing: 1px;
+
+    @media (--mobile) {
+      font-size: 16px;
+    }
+  }
+}
+
+button.modal-button {
+  padding: 15px;
+
+  @media (--mobile) {
+    padding: 10px;
+  }
+}

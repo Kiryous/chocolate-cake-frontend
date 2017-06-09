@@ -9,6 +9,7 @@
     width: 80%;
     background-color: var(--lightpink);
     margin: 0 auto 10%;
+    padding-bottom: 100px;
 
     @media (--tablet) {
       width: 90%;
@@ -83,13 +84,13 @@
     border-top: 5px solid var(--pink);
     border-left: 5px solid var(--pink);
     top: 0;
-    left: 0;
+    left: 395;
   }
 
   &::after {
     border-bottom: 5px solid var(--pink);
     border-right: 5px solid var(--pink);
-    right: 0;
+    right: 395;
     bottom: 0;
   }
 }
@@ -138,5 +139,33 @@
     width: 200px;
     height: 50px;
     padding: 0;
+  }
+}
+
+.popup {
+  width: 300px;
+  height: 300px;
+  background-color: var(--lightpink);
+  border: 3px solid var(--pink);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  &--js-success {
+    color: green;
+  }
+
+  &--js-error {
+    color: red;
+  }
+
+  &__text {
+    font-size: 20px;
   }
 }

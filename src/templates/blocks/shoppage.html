@@ -1,0 +1,95 @@
+<div class="shoppage shoppage__container">
+  <h1 class="title title--titleblack">Наш
+  <span class="title--titlepink">&nbsp;магазин&nbsp;</span>
+  </h1>
+  <div class="shoppage__items">
+    <div class="card shoppage-item">
+      <div class="card__photo">
+      </div>
+      <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
+
+
+      <div onclick="show('none')" id="modal-wrap"></div>
+      <div id="modal-window">
+      <div class="modal__close" onclick="show('none')"></div>
+      <div class="modal__item">
+        <div class="modal__photo"></div>
+        <div class="modal__data">
+          <p class="modal__price">Цена: <span class="modal__text">1990 &#8381;</span></p>
+          <p class="modal__size">Размер: <span class="modal__text">XS, S, M, L, XL, XXL</span></p>
+          <p class="modal__description">Описание: <span class="modal__text">Футболка, которая впишется в вашу жизнь! Футболка, которая впишется в вашу жизнь!</span></p>
+        </div>
+      </div>
+        <button class="button modal-button" type="button" name="button">В корзину</button>
+      </div>
+
+      <div class="card__caption"><a href="/">Оформить заказ</a>
+        <button class="shopcart-icon" onclick="show('block')">
+          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
+        </button>
+      </div>
+    </div>
+
+
+    <div class="card shoppage-item">
+      <div class="card__photo">
+      </div>
+      <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
+      <div class="card__caption" id=""><a href="/">Оформить заказ</a>
+        <button class="shopcart-icon" onclick="show('block')">
+          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
+        </button>
+      </div>
+    </div>
+
+    <div class="card shoppage-item">
+      <div class="card__photo">
+      </div>
+      <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
+      <div class="card__caption"><a href="/">Оформить заказ</a>
+        <button class="shopcart-icon" onclick="show('block')">
+          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="shoppage__items">
+    <div class="card shoppage-item">
+      <div class="card__photo">
+      </div>
+      <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
+      <div class="card__caption"><a href="/">Оформить заказ</a>
+        <button class="shopcart-icon" onclick="show('block')">
+          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
+        </button>
+      </div>
+    </div>
+
+    <div class="card shoppage-item">
+      <div class="card__photo">
+      </div>
+      <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
+      <div class="card__caption"><a href="/">Оформить заказ</a>
+        <button class="shopcart-icon" onclick="show('block')">
+          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
+        </button>
+      </div>
+    </div>
+
+    <div class="card shoppage-item">
+      <div class="card__photo">
+      </div>
+      <div class="card__caption">Белая футболка <b>1990 &#8381;</b></div>
+      <div class="card__caption"><a href="/">Оформить заказ</a>
+        <button class="shopcart-icon" onclick="show('block')">
+          {% include './icon.html' with {title: "shopcart", size: "small", style: "gray"} %}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="shoppage-button">
+    {% include 'button.html' with {text: 'Показать ещё', url: '#'} %}
+  </div>
+</div>

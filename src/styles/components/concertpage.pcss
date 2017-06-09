@@ -1,0 +1,119 @@
+.concertpage {
+  min-height: 100vh;
+  /*background-image: url(../img/concert_photo.png);*/
+  background-size: cover;
+  width: 100%;
+
+  &__container {
+    padding: 100px 150px;
+    background-color: rgb(255,233,237);
+
+    @media (--mobile) {
+      padding: 100px 0 50px 0;
+    }
+  }
+
+  &__item-first {
+    border-top: 5px solid var(--pink);
+    border-bottom: 5px solid var(--pink);
+
+    @media (--mobile) {
+      border-top: 3px solid var(--pink);
+      border-bottom: 3px solid var(--pink);
+    }
+  }
+
+  &__item {
+    width: 100%;
+    border-bottom: 5px solid var(--pink);
+    height: 150px;
+    padding: 10px 70px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (--mobile) {
+      height: 130px;
+      padding: 20px 5px;
+      border-bottom: 3px solid var(--pink);
+    }
+
+    &__place {
+      color: var(--pink);
+      font-size: 34px;
+      display: block;
+
+      @media (--mobile) {
+        font-size: 18px;
+      }
+    }
+
+    &__club {
+      display: block;
+      font-size: 34px;
+      margin-bottom: 10px;
+
+      @media (--mobile) {
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__date {
+      font-size: 30px;
+      width: 100%;
+      display: block;
+
+      @media (--mobile) {
+        font-size: 18px;
+      }
+
+      &--time {
+        font-size: 30px;
+        display: inline-block;
+        margin-left: 50px;
+        color: var(--pink);
+        /*color: rgba(0,0,0,0.9);*/
+
+        @media (--mobile) {
+          font-size: 18px;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__ticket {
+      font-size: 34px;
+      width: 100%;
+      display: block;
+
+      @media (--mobile) {
+        font-size: 18px;
+      }
+    }
+
+    @media (--mobile) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.concertpage-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.concertpage-description {
+  display: block;
+  width: 80%;
+}
+
+.concert-tickets {
+  display: block;
+  width: 20%;
+}
+
+.vip {
+  color: var(--pink);
+}

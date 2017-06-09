@@ -1,0 +1,118 @@
+.fullalbum {
+  width: 100vw;
+  min-height: 100vh;
+
+  &__container {
+    padding: 130px 150px;
+
+    @media(--mobile) {
+      padding: 100px 0;
+    }
+  }
+}
+
+.album-list {
+  padding: 50px 0;
+
+  @media(--mobile) {
+    padding: 0;
+  }
+}
+
+.line-container {
+  display: flex;
+
+  @media(--mobile) {
+    display: block;
+  }
+
+}
+
+.album-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  height: 400px;
+  padding: 0 20px;
+  flex: 1 1 33.33%;
+
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s ease;
+
+  @media(--mobile) {
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding: 150px 0;
+  }
+
+  &--img1 {
+    background-image: linear-gradient(transparent, var(--pink)), url(../img/album1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--img2 {
+    background-image: linear-gradient(transparent, var(--pink)), url(../img/album2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--img3 {
+    background-image: linear-gradient(transparent, var(--pink)), url(../img/album1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.album-description {
+
+  text-align: center;
+  margin: auto;
+  display: none;
+
+  &__title {
+    font-size: 36px;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    @media(--mobile) {
+      font-size: 22px;
+    }
+
+    &--date {
+      text-decoration: none;
+      font-size: 30px;
+      color: white;
+
+      @media(--mobile) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.album-cover--img1:hover {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/album1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.album-cover--img1:hover .album-description, .album-cover--img2:hover .album-description, .album-cover--img3:hover .album-description {
+  display: block;
+}
+
+.album-cover--img2:hover {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/album2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.album-cover--img3:hover {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/album1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

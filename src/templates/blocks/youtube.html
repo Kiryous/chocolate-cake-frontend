@@ -1,9 +1,11 @@
 <div class="youtube">
+  <div class="youtube__container">
     <div class="youtube__video">
-      <div class="youtube__js js-video js-title-video"></div>
+      <div class="youtube__js"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/h78KZKdzR5Y" frameborder="0" allowfullscreen></iframe></div>
      </div>
     <div class="youtube__buttons-container">
         {% include 'button.html' with {text: 'Перейти на канал', url: 'https://www.youtube.com/channel/UCgE4mgF3WgzHcaF4ONlCRpw'} %}
         {% include 'button.html' with {text: 'Купить альбом', url: '/album.html'} %}
     </div>
+  </div>
 </div>

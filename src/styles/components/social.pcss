@@ -141,3 +141,31 @@
     padding: 0;
   }
 }
+
+.popup {
+  width: 300px;
+  height: 300px;
+  background-color: var(--lightpink);
+  border: 3px solid var(--pink);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+
+  &--js-success {
+    color: green;
+  }
+
+  &--js-error {
+    color: red;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+}

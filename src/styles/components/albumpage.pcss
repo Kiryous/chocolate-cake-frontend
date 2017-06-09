@@ -3,7 +3,7 @@
   min-height: 100vh;
 
   &__container {
-    padding: 130px 150px;
+    padding: 130px 5%;
 
     @media(--mobile) {
       padding: 100px 0;
@@ -53,18 +53,21 @@
     background-image: linear-gradient(transparent, var(--pink)), url(../img/album1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 0;
   }
 
   &--img2 {
     background-image: linear-gradient(transparent, var(--pink)), url(../img/album2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 0;
   }
 
   &--img3 {
     background-image: linear-gradient(transparent, var(--pink)), url(../img/album1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 0;
   }
 }
 
@@ -99,6 +102,7 @@
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/album1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 
 .album-cover--img1:hover .album-description, .album-cover--img2:hover .album-description, .album-cover--img3:hover .album-description {
@@ -109,10 +113,12 @@
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/album2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 
 .album-cover--img3:hover {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/album1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 0;
 }

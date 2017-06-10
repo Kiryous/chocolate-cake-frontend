@@ -46,27 +46,29 @@ var paths = {
   bundles:  OUT + '/assets/img/',
   html: 'build/',
   fonts: 'src/fonts/',
-  outFonts: OUT + '/assets/fonts/'
+  outFonts: OUT + '/assets/fonts/',
+  audios: 'src/audios',
+  outAudios: OUT + '/assets/audios/'  
 };
 
 // Одноразовая сборка проекта
 gulp.task('default', function() {
-  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'cache', 'img');
+  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'copy-audios', 'cache', 'img');
 });
 
 // Запуск живой сборки
 gulp.task('live', function() {
-  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'img', 'watch', 'server');
+  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'copy-audios', 'img', 'watch', 'server');
 });
 
 // Запуск туннеля в интернет
 gulp.task('external-world', function() {
-  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'img', 'watch', 'web-server');
+  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'copy-audios', 'img', 'watch', 'web-server');
 });
 
 // Cборка с вотчем без браузерсинка
 gulp.task('no-server', function() {
-  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'img', 'watch');
+  gulp.start('templates', 'styles', 'scripts', 'copy-fonts', 'copy-audios', 'img', 'watch');
 });
 
 // Федеральная служба по контролю за оборотом файлов
@@ -74,7 +76,8 @@ gulp.task('watch', function() {
   gulp.watch(paths.templates + '**/*.html', ['templates']);
   gulp.watch(paths.styles + '**/*.pcss', ['styles']);
   gulp.watch(paths.scripts + '*.js', ['scripts']);
-  gulp.watch(paths.fonts + '**/*', ['copy-fonts']);  
+  gulp.watch(paths.fonts + '**/*', ['copy-fonts']); 
+  gulp.watch(paths.audios + '**/*', ['copy-audios']);     
   gulp.watch(paths.img + '*.{png,jpg,gif,svg}', ['img']).on('change', function(event) {
     if (event.type === 'deleted') {
       del(paths.bundles + path.basename(event.path));
@@ -143,6 +146,14 @@ gulp.task('copy-fonts', () => {
 		.pipe(plumber({errorHandler: onError}))
 		.pipe(rename(flatten))
 		.pipe(gulp.dest(paths.outFonts));
+});
+
+gulp.task('copy-audios', () => {
+	return gulp
+		.src(paths.audios + '**/*')
+		.pipe(plumber({errorHandler: onError}))
+		.pipe(rename(flatten))
+		.pipe(gulp.dest(paths.outAudios));
 });
 
 // Очистка кэша для яваскрипта и ЦССа

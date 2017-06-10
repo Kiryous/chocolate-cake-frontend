@@ -1,4 +1,4 @@
-<div class="player js-player" data-source="">
+<div class="player js-player" data-title="{{title}}">
   <button 
     class="player__control {% if pause %}player__control--pause{% else %}player__control--play{% endif %} js-player-play" 
     title="Play"> </button>
@@ -9,4 +9,5 @@
     <a class="player__external" href="http://itunes.com">
       {% include './icon.html' with {title: "itunes", size: "mid"} %}
     </a>
+  <audio class="player__audio js-player-audio" src="{{src}}" type="audio/mpeg"></audio>
 </div>

@@ -21,6 +21,7 @@ var gulp = require('gulp'),
     cachebust = require('gulp-cache-bust'),
     eslint = require('gulp-eslint'),
     babel = require("gulp-babel"),
+    sourcemaps = require("gulp-sourcemaps"),
     reload = browserSync.reload;
 
 function flatten(path) {
@@ -123,9 +124,11 @@ gulp.task('scripts', function() {
     .pipe(plumber({errorHandler: onError}))
     .pipe(eslint())
     .pipe(eslint.format())
+    .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(concat('scripts.js'))
     .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.js))
     .pipe(reload({stream: true}));    
 });

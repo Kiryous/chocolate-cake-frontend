@@ -155,12 +155,21 @@ var formsModule = (function () {
 	var _defaultRun = function () {
 	};
 
+	var _getInputByName = function(inputs, name) {
+		var res = Array.prototype.filter.call(inputs, function(input, index) {
+			return input.name === name;
+		});
+		console.log(res);
+		return res.length ? res[0] : null;
+	}
+
 	var _formsListener = function () {
 		var forms = document.querySelectorAll(_vars.formsClass);
 
 		Array.prototype.forEach.call(forms, function(form, index) {
 			form.addEventListener('submit', function(e) {
 				e.preventDefault();
+				var emailInput = _getInputByName(inputs, 'email');				
 
 				var inputs = form.querySelectorAll(_vars.inputClass),
 						method = form.method,
@@ -187,6 +196,10 @@ var formsModule = (function () {
 
 				if (!email) {
 					console.error('Ошибка в formsModule._formsBindSubmit: у формы ' + form + ' не заполнены контактные данные.');
+					emailInput.classList.add('error');
+					setTimeout(() => {
+						emailInput.classList.remove('error');						
+					}, 400)
 					popupModule.showError('Пожалуйста, введите ваш Email!');
 					return false;
 				};
